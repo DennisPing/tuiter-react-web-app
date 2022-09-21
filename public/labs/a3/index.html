@@ -76,4 +76,117 @@
     </div>
 </div>
 
+<h2>Colors</h2>
+<h3 class="fg-color-blue">Foreground color</h3>
+<p class="fg-color-red">
+    The text in this paragraph is red but
+    <span class="fg-color-green">this text is green</span>
+</p>
+
+<h3 class="bg-color-blue fg-color-white">Background color</h3>
+<p class="bg-color-red fg-color-black">
+    This background of this paragraph is red but
+    <span class="bg-color-green fg-color-white"> the background
+        of this text is green and the foreground white</span>
+</p>
+
+<h2>Borders</h2>
+<p class="border-fat border-red border-solid">
+    Solid fat red border</p>
+<p class="border-thin border-blue border-dashed">
+    Dashed thin blue border</p>
+
+<h2>Padding</h2>
+<div class="padded-top-left border-fat 
+            border-red border-solid 
+            bg-color-yellow">
+    Padded top left
+</div>
+
+<div class="padded-bottom-right border-fat 
+            border-blue border-solid 
+            bg-color-yellow">
+    Padded bottom right
+</div>
+<div class="padding-fat border-fat 
+            border-yellow border-solid 
+            bg-color-blue fg-color-white">
+    Padded all around
+</div>
+
+<h2>Margins</h2>
+<div class="margin-bottom 
+            padded-top-left 
+            border-fat border-red
+            border-solid
+            bg-color-yellow">
+    Margin bottom
+</div>
+<div class="margin-right-left
+            padded-bottom-right
+            border-fat border-blue
+            border-solid
+            bg-color-yellow">
+    Margin left right
+</div>
+<div class="margin-all-around
+            padding-fat border-fat
+            border-yellow
+            border-solid
+            bg-color-blue
+            fg-color-white">
+    Margin all around
+</div>
+
+<h3>Rounded corners</h3>
+<p class="rounded-corners-top 
+        border-thin border-blue border-solid
+        padding-fat">
+    Rounded corners on the padded
+</p>
+<p class="rounded-corners-bottom 
+        border-thin border-blue border-solid 
+        padding-fat">
+    Rounded corners at the bottom
+</p>
+<p class="rounded-corners-all-around 
+        border-thin border-blue border-solid 
+        padding-fat">
+    Rounded corners all around
+</p>
+<p class="rounded-corners-inline 
+        border-thin border-blue border-solid 
+        padding-fat">
+    Different rounded corners
+</p>
+
+<h2>Dimensions</h2>
+<div>
+    <div class="dimension-portrait bg-color-yellow">
+        Portrait
+    </div>
+    <div class="dimension-landscape bg-color-blue
+                fg-color-white">
+        Landscape
+    </div>
+    <div class="dimension-square bg-color-red">
+        Square
+    </div>
+</div>
+
+<h2>Position</h2>
+<h3>Relative</h3>
+<div>
+    <div class="bg-color-yellow dimension-portrait">
+        <div class="pos-relative-nudge-down-right">
+            Portrait
+        </div>
+    </div>
+</div>
+<div class="pos-relative-nudge-up-right bg-color-blue 
+            fg-color-white dimension-landscape">
+    Landscape
+</div>
+<div class="bg-color-red dimension-square">Square</div>
+
 </html>
