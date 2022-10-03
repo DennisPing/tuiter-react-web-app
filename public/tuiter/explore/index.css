@@ -163,3 +163,9 @@ body {
     color: rgb(110, 118, 125);
     margin: 16px;
 }
+
+.wd-mini-icon {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
