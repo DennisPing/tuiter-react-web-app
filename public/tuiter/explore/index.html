@@ -3,116 +3,191 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore</title>
 
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> -->
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+
+    <link href="../../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../vendors/fontawesome/css/all.css" rel="stylesheet" />
     <link href="index.css" rel="stylesheet" />
 </head>
 
 <body>
-    <div class="wd-main-body">
-        <div class="wd-search-bar">
-            <input class="wd-search-bar-input" type="text" placeholder="Search Tuiter" />
-            <a class="wd-search-bar-gear" href="explore-settings.html">
-                <img src="images/gear-32.png">
-            </a>
-        </div>
-
-        <div class="wd-nav-bar">
-            <div class="wd-nav-tab-div">
-                <div class="wd-nav-text-wrapper wd-nav-div-underline">
-                    <a class="wd-nav-text-highlighted" href="for-you.html">For you</a>
+    <div class="container p-2">
+        <div class="row">
+            <div class="col-2">
+                <div class="list-group">
+                    <li class="list-group-item">
+                        <i class="fa-brands fa-twitter"></i>
+                    </li>
+                    <a href="../home.html" class="list-group-item list-group-item-action">
+                        <i class="fa-solid fa-house-chimney"></i><span class="mx-2">Home</span>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action active">
+                        <i class="fa-solid fa-hashtag"></i><span class="mx-2">Explore</span>
+                    </a>
+                    <a href="../notifications.html" class="list-group-item list-group-item-action">
+                        <i class="fa-solid fa-bell"></i><span class="mx-2">Notifications</span>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <i class="fa-solid fa-envelope"></i><span class="mx-2">Messages</span>
+                    </a>
+                    <a href="../bookmarks/index.html" class="list-group-item list-group-item-action">
+                        <i class="fa-solid fa-bookmark"></i><span class="mx-2">Bookmarks</span>
+                    </a>
+                    <a href="../lists.html" class="list-group-item list-group-item-action">
+                        <i class="fa-solid fa-list-ul"></i><span class="mx-2">Lists</span>
+                    </a>
+                    <a href="../profile.html" class="list-group-item list-group-item-action">
+                        <i class="fa-solid fa-user"></i><span class="mx-2">Profile</span>
+                    </a>
+                    <a href="../more.html" class="list-group-item list-group-item-action">
+                        <span class="fa-stack stacked-icon">
+                            <i class="fa-solid fa-circle fa-stack-1x"></i>
+                            <i class="fa-solid fa-ellipsis fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <span class="mx-2">More</span>
+                    </a>
                 </div>
+                <a name="" id="" class="btn btn-primary rounded-pill w-100 mt-2 fw-bold" href="#"
+                    role="button">Tweet</a>
             </div>
-            <div class="wd-nav-tab-div">
-                <div class="wd-nav-text-wrapper">
-                    <a class="wd-nav-text" href="trending.html">Trending</a>
+
+            <div class="col-6 position-relative">
+                <div class="mb-2">
+                    <input type="text" class="form-control rounded-pill" id="searchBar1" aria-describedby="helpId"
+                        placeholder="Search Twitter">
                 </div>
+
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">For you</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Trending</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" tabindex="-1">Sports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" tabindex="-1">Entertainment</a>
+                    </li>
+                </ul>
+
+                <img src="images/Starship-Mk1-Day.webp" class="img-fluid mt-2" alt="">
+                <h1 class="position-absolute bottom-0 text-white m-1">SpaceX's Starship</h1>
+
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-10 px-2">
+                                <div class="text-secondary">
+                                    Web Development
+                                </div>
+                                <div>
+                                    <span class="fw-bolder">ReactJS</span>
+                                    <i class="fa-solid fa-circle-check"></i>
+                                    <span class="text-secondary"> - 2h </span>
+
+                                </div>
+                                <div class="fw-bold">
+                                    React.js is a component based front end library that makes it very easy to build
+                                    Single Page Applications or SPAs
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <img src="images/react-logo.png" class="rounded-3 float-end" height="80px">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-10 px-2">
+                                <div>
+                                    <span class="fw-bolder">JavaScript</span>
+                                    <i class="fa-solid fa-circle-check"></i>
+                                    <span class="text-secondary"> - 2h </span>
+
+                                </div>
+                                <div class="fw-bold">
+                                    JavaScript is a programming language that can run on browsers as well as desktops
+                                </div>
+                                <div class="text-secondary">
+                                    123K Tweets
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <img src="images/javascript-logo.png" class="rounded-3 float-end" height="80px">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-10 px-2">
+                                <div class="text-secondary">
+                                    Web Development
+                                </div>
+                                <div>
+                                    <span class="fw-bolder">ReactJS</span>
+                                    <i class="fa-solid fa-circle-check"></i>
+                                    <span class="text-secondary"> - 2h </span>
+
+                                </div>
+                                <div class="fw-bold">
+                                    React.js is a component based front end library that makes it very easy to build
+                                    Single Page Applications or SPAs
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <img src="images/jquery-logo.png" class="rounded-3 float-end" height="80px">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-10 px-2">
+                                <div class="text-secondary">
+                                    Web Development
+                                </div>
+                                <div>
+                                    <span class="fw-bolder">ReactJS</span>
+                                    <i class="fa-solid fa-circle-check"></i>
+                                    <span class="text-secondary"> - 2h </span>
+
+                                </div>
+                                <div class="fw-bold">
+                                    React.js is a component based front end library that makes it very easy to build
+                                    Single Page Applications or SPAs
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <img src="images/nodejs-logo.png" class="rounded-3 float-end" height="80px">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
             </div>
-            <div class="wd-nav-tab-div">
-                <div class="wd-nav-text-wrapper">
-                    <a class="wd-nav-text" href="covid-19.html">COVID-19</a>
-                </div>
-            </div>
-            <div class="wd-nav-tab-div">
-                <div class="wd-nav-text-wrapper">
-                    <a class="wd-nav-text" href="news.html">News</a>
-                </div>
-            </div>
-            <div class="wd-nav-tab-div">
-                <div class="wd-nav-text-wrapper">
-                    <a class="wd-nav-text" href="sports.html">Sports</a>
-                </div>
-            </div>
-            <div class="wd-nav-tab-div">
-                <div class="wd-nav-text-wrapper">
-                    <a class="wd-nav-text" href="entertainment.html">Entertainment</a>
-                </div>
+
+            <div class="col-4">
+                Who to follow
             </div>
         </div>
 
-        <div class="wd-thick-sep"></div>
-
-        <div class="wd-post">
-            <p class="wd-post-subtitle">Trending in Science</p>
-            <p class="wd-post-more">...</p>
-            <p class="wd-post-title">Starship</p>
-            <p class="wd-post-stats">55.5K Tuits</p>
-
-        </div>
-
-        <div class="wd-post">
-            <p class="wd-post-subtitle">Sports &middot; Joe Rogan</p>
-            <p class="wd-post-more">...</p>
-            <p class="wd-post-title">Joe Rogan</p>
-            <p class="wd-post-stats">3218 Tuits</p>
-        </div>
-
-        <div class="wd-thin-sep"></div>
-
-        <div class="wd-post">
-            <div class="wd-post-subtitle-inline">
-                <img src="images/nyt-logo.jpg" class="wd-mini-icon">
-                <span class="wd-post-source">The New York Times </span>
-                <img src="images/Twitter_Verified_Badge.svg" class="wd-mini-icon">
-                <span class="wd-post-time">&middot;
-                    Yesterday</span>
-            </div>
-            <img src="images/chris-cuomo.webp" class="wd-post-image">
-            <p class="wd-post-title">CNN's Cuomo conundrum</p>
-            <p class="wd-post-stats">3,218 Tuits</p>
-        </div>
-
-        <div class="wd-thin-sep"></div>
-
-        <div class="wd-post">
-            <div class="wd-post-subtitle">COVID-19 &middot; LIVE</div>
-            <img src="images/mass-general.webp" class="wd-post-image">
-            <p class="wd-post-title">COVID-19: News and updates for Massachusetts</p>
-        </div>
-
-        <div class="wd-thin-sep"></div>
-
-        <div class="wd-post">
-            <div class="wd-post-subtitle-inline">
-                <img src="images/bloomberg.png" class="wd-mini-icon">
-                <span class="wd-post-source">Bloomberg Opinion </span>
-                <img src="images/Twitter_Verified_Badge.svg" class="wd-mini-icon">
-                <span class="wd-post-time">&middot;
-                    Yesterday</span>
-            </div>
-            <img src="images/booster-shot.jpg" class="wd-post-image">
-            <p class="wd-post-title">Thinking about getting a booster? Read this first.</p>
-        </div>
-
-        <div class="wd-thin-sep"></div>
-
-        <div class="wd-post">
-            <p class="wd-post-subtitle">Trending in the United States</p>
-            <p class="wd-post-more">...</p>
-            <p class="wd-post-title">Wonder Bread</p>
-            <p class="wd-post-stats">1,259 Tuits</p>
-        </div>
     </div>
+
+
+
 </body>
 
 </html>
