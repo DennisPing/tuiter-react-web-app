@@ -7,3 +7,11 @@
 .wd-fine-print {
     font-size: 12px;
 }
+
+.list-group-item-action:hover {
+    opacity: 0.85 !important;
+}
+
+.wd-pseudo-background {
+    background-color: lightsteelblue;
+}
