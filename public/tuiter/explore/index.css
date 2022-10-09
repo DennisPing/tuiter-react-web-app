@@ -3,18 +3,3 @@
     height: 1em;
     line-height: 1em;
 }
-
-.wd-search-bar {
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.wd-search-icon {
-    position: absolute;
-    margin-left: 1em;
-}
-
-.wd-cog-icon {
-    color: #0d6efd
-}
