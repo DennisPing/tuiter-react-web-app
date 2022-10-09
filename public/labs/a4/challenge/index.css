@@ -5,7 +5,12 @@
 }
 
 .wd-fine-print {
+    text-decoration: none;
     font-size: 12px;
+}
+
+.wd-fine-print:hover {
+    text-decoration: underline;
 }
 
 .list-group-item-action:hover {
