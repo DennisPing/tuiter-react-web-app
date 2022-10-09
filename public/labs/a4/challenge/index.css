@@ -4,21 +4,6 @@
     line-height: 1em;
 }
 
-.wd-search-bar {
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.wd-search-icon {
-    position: absolute;
-    margin-left: 1em;
-}
-
-.wd-cog-icon {
-    color: #0275d8
-}
-
 .wd-bg-black {
     background-color: black;
     color: var(--bs-light);
