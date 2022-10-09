@@ -4,23 +4,6 @@
     line-height: 1em;
 }
 
-.wd-bg-black {
-    background-color: black;
-    color: var(--bs-light);
-}
-
-.wd-bg-dark {
-    background-color: var(--bs-dark);
-    color: var(--bs-light);
-}
-
-.wd-scale-smaller {
-    font-size: smaller;
-}
-
-.wd-tab-active {
-    color: var(--bs-light);
-    font-weight: bold;
-    border-bottom: 4px solid var(--bs-primary) !important;
-    border-radius: 3px !important;
+.wd-fine-print {
+    font-size: 12px;
 }
