@@ -1,0 +1,41 @@
+.wd-stacked-icon {
+    width: 1em;
+    height: 1em;
+    line-height: 1em;
+}
+
+.wd-search-bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.wd-search-icon {
+    position: absolute;
+    margin-left: 1em;
+}
+
+.wd-cog-icon {
+    color: #0275d8
+}
+
+.wd-bg-black {
+    background-color: black;
+    color: var(--bs-light);
+}
+
+.wd-bg-dark {
+    background-color: var(--bs-dark);
+    color: var(--bs-light);
+}
+
+.wd-scale-smaller {
+    font-size: smaller;
+}
+
+.wd-tab-active {
+    color: var(--bs-light);
+    font-weight: bold;
+    border-bottom: 4px solid var(--bs-primary) !important;
+    border-radius: 3px !important;
+}

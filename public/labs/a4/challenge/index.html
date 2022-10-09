@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- <link href="../../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../vendors/fontawesome/css/all.css" rel="stylesheet" /> -->
+    <link href="index.css" rel="stylesheet" />
+</head>
+
+<body class="bg-black text-secondary">
+    <div class="container p-2">
+        <div class="row">
+            <div class="col-auto col-xl-2 border border-dark pt-2">
+                <div class="list-group text-secondary">
+                    <li class="wd-bg-black list-group-item">
+                        <i class="fa-brands fa-twitter fa-2x"></i>
+                    </li>
+                    <a href="../home.html" class="wd-bg-black list-group-item list-group-item-action">
+                        <i class="fa-solid fa-house-chimney"></i><span class="mx-2 d-none d-xl-inline-block">Home</span>
+                    </a>
+                    <a href="#" class="wd-bg-black list-group-item list-group-item-action">
+                        <i class="fa-solid fa-hashtag"></i><span class="mx-2 d-none d-xl-inline-block">Explore</span>
+                    </a>
+                    <a href="../notifications.html" class="wd-bg-black list-group-item list-group-item-action">
+                        <i class="fa-solid fa-bell"></i><span class="mx-2 d-none d-xl-inline-block">Notifications</span>
+                    </a>
+                    <a href="../messages.html" class="wd-bg-black list-group-item list-group-item-action">
+                        <i class="fa-solid fa-envelope"></i><span class="mx-2 d-none d-xl-inline-block">Messages</span>
+                    </a>
+                    <a href="../bookmarks/index.html" class="wd-bg-black list-group-item list-group-item-action">
+                        <i class="fa-solid fa-bookmark"></i><span class="mx-2 d-none d-xl-inline-block">Bookmarks</span>
+                    </a>
+                    <a href="../lists.html" class="wd-bg-black list-group-item list-group-item-action">
+                        <i class="fa-solid fa-list-ul"></i><span class="mx-2 d-none d-xl-inline-block">Lists</span>
+                    </a>
+                    <a href="../profile.html" class="wd-bg-black list-group-item list-group-item-action">
+                        <i class="fa-solid fa-user"></i><span class="mx-2 d-none d-xl-inline-block">Profile</span>
+                    </a>
+                    <a href="../more.html" class="wd-bg-black list-group-item list-group-item-action">
+                        <span class="fa-stack wd-stacked-icon">
+                            <i class="fa-regular fa-circle fa-stack-1x"></i>
+                            <i class="fa-solid fa-ellipsis fa-stack-1x wd-scale-smaller"></i>
+                        </span>
+                        <span class="mx-2 d-none d-xl-inline-block">More</span>
+                    </a>
+                </div>
+                <a name="" id="" class="btn btn-primary rounded-pill w-100 mt-2" href="#" role="button">Tweet</a>
+            </div>
+
+            <div class="col col-lg-7 border-top border-bottom border-dark pt-2">
+                <div class="mb-2">
+                    <div class="d-flex">
+                        <div class="flex-grow-1">
+                            <div class="wd-search-bar">
+                                <input type="text" class="form-control rounded-pill ps-5 bg-dark border-dark"
+                                    id="searchBar1" aria-describedby="helpId" placeholder="Search Twitter">
+                                <i class="fa-solid fa-magnifying-glass wd-search-icon"></i>
+                            </div>
+                        </div>
+                        <div class="px-2 align-self-center">
+                            <i class="fa-solid fa-gear fa-2x wd-cog-icon float-end"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="nav nav-tabs d-flex border-dark">
+                    <li class="nav-item flex-fill text-center">
+                        <a class="nav-link text-secondary" href="../for-you.html">For you</a>
+                    </li>
+                    <li class="nav-item flex-fill text-center">
+                        <a class="nav-link text-secondary" href="../trending.html">Trending</a>
+                    </li>
+                    <li class="nav-item flex-fill text-center">
+                        <a class="nav-link text-secondary" href="../news.html">News</a>
+                    </li>
+                    <li class="nav-item flex-fill text-center">
+                        <a class="nav-link text-secondary" href="../sports.html" tabindex="-1">Sports</a>
+                    </li>
+                    <li class="nav-item flex-fill text-center">
+                        <a class="nav-link d-none d-md-block wd-tab-active" href="../entertainment.html"
+                            tabindex="-1">Entertainment</a>
+                    </li>
+                </ul>
+
+                <div class="position-relative">
+                    <img src="https://mushucdn.b-cdn.net/bts.webp" class="img-fluid mt-2 rounded-top" alt="">
+                </div>
+
+                <ul class="list-group rounded-0 rounded-bottom">
+                    <li class="list-group-item wd-bg-black">
+                        <div class="row">
+                            <div class="col-9 col-md-10 px-2">
+                                <div class="text-secondary">
+                                    Web Development
+                                </div>
+                                <div>
+                                    <span class="fw-bolder">ReactJS</span>
+                                    <i class="fa-solid fa-circle-check"></i>
+                                    <span class="text-secondary"> - 2h </span>
+                                </div>
+                                <div class="fw-bold">
+                                    React.js is a component based front end library that makes it very easy to build
+                                    Single Page Applications or SPAs
+                                </div>
+                            </div>
+                            <div class="col-3 col-md-2 align-self-center">
+                                <img src="https://mushucdn.b-cdn.net/react-logo.png" class="rounded-3 float-end"
+                                    height="80px">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item wd-bg-black">
+                        <div class="row">
+                            <div class="col-9 col-md-10 px-2">
+                                <div>
+                                    <span class="fw-bolder">JavaScript</span>
+                                    <i class="fa-solid fa-circle-check"></i>
+                                    <span class="text-secondary"> - 2h </span>
+                                </div>
+                                <div class="fw-bold">
+                                    JavaScript is a programming language that can run on browsers as well as desktops
+                                </div>
+                                <div class="text-secondary">
+                                    123K Tweets
+                                </div>
+                            </div>
+                            <div class="col-3 col-md-2 align-self-center">
+                                <img src="https://mushucdn.b-cdn.net/javascript-logo.png" class="rounded-3 float-end"
+                                    height="80px">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item wd-bg-black">
+                        <div class="row">
+                            <div class="col-9 col-md-10 px-2">
+                                <div class="text-secondary">
+                                    Web Development
+                                </div>
+                                <div class="fw-bold">
+                                    jQuery
+                                </div>
+                                <div class="text-secondary">
+                                    123K Tweets
+                                </div>
+                            </div>
+                            <div class="col-3 col-md-2 align-self-center">
+                                <img src="https://mushucdn.b-cdn.net/jquery-logo.png" class="rounded-3 float-end"
+                                    height="80px">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item wd-bg-black">
+                        <div class="row">
+                            <div class="col-9 col-md-10 px-2">
+                                <div class="text-secondary">
+                                    Web Development
+                                </div>
+                                <div>
+                                    <span class="fw-bolder">NodeJS</span>
+                                    <i class="fa-solid fa-circle-check"></i>
+                                    <span class="text-secondary"> - 2h </span>
+                                </div>
+                                <div class="text-secondary">
+                                    123K Tweets
+                                </div>
+                            </div>
+                            <div class="col-3 col-md-2 align-self-center">
+                                <img src="https://mushucdn.b-cdn.net/nodejs-logo.png" class="rounded-3 float-end"
+                                    height="80px">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="col d-none d-lg-block border border-dark pt-2">
+                <ul class="list-group rounded-3">
+                    <li class="list-group-item fw-bold wd-bg-dark">Who to follow</li>
+                    <a href="#" class="list-group-item list-group-item-action px-2 wd-bg-dark">
+                        <div class="row">
+                            <div class="col-2 align-self-center">
+                                <img src="https://mushucdn.b-cdn.net/java-logo.png" class="img-fluid rounded-circle">
+                            </div>
+                            <div class="col-6 px-0 text-nowrap">
+                                <div>
+                                    <span>Java</span>
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div>
+                                <div class="text-secondary">@Java</div>
+                            </div>
+                            <div class="col-4 align-self-center">
+                                <button class="btn btn-primary rounded-pill w-100">Follow</button>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class=" list-group-item list-group-item-action px-2 wd-bg-dark">
+                        <div class="row">
+                            <div class="col-2 align-self-center">
+                                <img src="https://mushucdn.b-cdn.net/relativity-space-logo.webp"
+                                    class="img-fluid rounded-circle">
+                            </div>
+                            <div class="col-6 px-0 text-nowrap">
+                                <div>
+                                    <span>Relativity Space</span>
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div>
+                                <div class="text-secondary">@RelativitySpace</div>
+                            </div>
+                            <div class="col-4 align-self-center">
+                                <button class="btn btn-primary rounded-pill w-100">Follow</button>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action px-2 wd-bg-dark">
+                        <div class="row">
+                            <div class="col-2 align-self-center">
+                                <img src="https://mushucdn.b-cdn.net/virgin-galactic.svg"
+                                    class="img-fluid rounded-circle">
+                            </div>
+                            <div class="col-6 px-0 text-nowrap">
+                                <div>
+                                    <span>Virgin Galactic</span>
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div>
+                                <div class="text-secondary">@VirginGalactic</div>
+                            </div>
+                            <div class="col-4 align-self-center">
+                                <button class="btn btn-primary rounded-pill w-100">Follow</button>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action px-2 wd-bg-dark">
+                        <div class="row">
+                            <div class="col-2 align-self-center">
+                                <img src="https://mushucdn.b-cdn.net/nasa-logo.png" class="img-fluid rounded-circle">
+                            </div>
+                            <div class="col-6 px-0 text-nowrap">
+                                <div>
+                                    <span>NASA</span>
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div>
+                                <div class="text-secondary">@NASA</div>
+                            </div>
+                            <div class="col-4 align-self-center">
+                                <button class="btn btn-primary rounded-pill w-100">Follow</button>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action px-2 wd-bg-dark">
+                        <div class="row">
+                            <div class="col-2 align-self-center">
+                                <img src="https://mushucdn.b-cdn.net/tesla-logo.png" class="img-fluid rounded-circle">
+                            </div>
+                            <div class="col-6 px-0 text-nowrap">
+                                <div>
+                                    <span>Tesla</span>
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div>
+                                <div class="text-secondary">@Tesla</div>
+                            </div>
+                            <div class="col-4 align-self-center">
+                                <button class="btn btn-primary rounded-pill w-100">Follow</button>
+                            </div>
+                        </div>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
