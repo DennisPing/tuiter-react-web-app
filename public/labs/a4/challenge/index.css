@@ -24,3 +24,7 @@
 .wd-pseudo-background {
     background-color: lightsteelblue;
 }
+
+.fill {
+    height: 100%;
+}
