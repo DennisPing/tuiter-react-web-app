@@ -26,5 +26,9 @@
 }
 
 .wd-nudge {
-    padding-left: 3px;
+    padding-left: 2px;
+}
+
+.wd-tall {
+    height: 23px;
 }
