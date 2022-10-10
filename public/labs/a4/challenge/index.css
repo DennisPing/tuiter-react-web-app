@@ -17,7 +17,7 @@
     opacity: 0.85 !important;
 }
 
-.nav-tabs .nav-item:hover {
+.nav-link:hover {
     opacity: 0.85 !important;
 }
 
@@ -27,4 +27,11 @@
 
 .wd-nudge {
     padding-left: 2px;
+}
+
+.wd-scroll {
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
