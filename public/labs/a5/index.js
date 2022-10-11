@@ -65,7 +65,7 @@ if (!false1) {
 
 // Section 2.5.2
 console.log("Ternary conditional operator");
-const loggedIn = true;
+let loggedIn = true;
 const greeting = loggedIn ? "Welcome!" : "Please login";
 console.log(greeting);
 
@@ -97,3 +97,81 @@ const twoSquared = square(2);
 const threePlusOne = plusOne(3);
 console.log(twoSquared);
 console.log(threePlusOne);
+
+// Section 2.7
+let numberArray1 = [1, 2, 3, 4, 5];
+let stringArray1 = ["string1", "string2"];
+let variableArray1 = [
+  functionScoped,
+  blockScoped,
+  constant1,
+  numberArray1,
+  stringArray1,
+];
+console.log(numberArray1);
+console.log(stringArray1);
+console.log(variableArray1);
+
+// Section 2.7.1
+const length1 = numberArray1.length;
+const index1 = numberArray1.indexOf(3);
+console.log(length1);
+console.log(index1);
+
+// Section 2.7.2
+// adding new items
+numberArray1.push(6);
+stringArray1.push("string3");
+// remove 1 item starting on 3rd spot
+numberArray1.splice(2, 1);
+stringArray1.splice(1, 1);
+console.log(numberArray1);
+console.log(stringArray1);
+
+// Section 2.7.3
+for (let i = 0; i < stringArray1.length; i++) {
+  const string1 = stringArray1[i];
+  console.log(string1);
+}
+
+// Section 2.7.4
+const squares = numberArray1.map(square);
+const cubes = numberArray1.map((a) => a * a * a);
+console.log(squares);
+console.log(cubes);
+
+// Section 2.7.5
+const four = numberArray1.find((a) => a === 4);
+const string3 = stringArray1.find((a) => a === "string3");
+console.log(four);
+console.log(string3);
+
+// Section 2.7.6
+const fourIndex = numberArray1.findIndex((a) => a === 4);
+const string3Index = stringArray1.findIndex((a) => a === "string3");
+console.log(fourIndex);
+console.log(string3Index);
+
+// Section 2.7.7
+const numbersGreaterThan2 = numberArray1.filter((a) => a > 2);
+const evenNumbers = numberArray1.filter((a) => a % 2 === 0);
+const oddNumbers = numberArray1.filter((a) => a % 2 !== 0);
+console.log(numbersGreaterThan2);
+console.log(evenNumbers);
+console.log(oddNumbers);
+
+// Section 2.8
+const five = 2 + 3;
+const result1 = "2 + 3 = " + five;
+console.log(result1);
+
+const result2 = `2 + 3 = ${2 + 3}`;
+console.log(result2);
+
+const username = "alice";
+const greeting1 = `Welcome home ${username}`;
+console.log(greeting1);
+
+loggedIn = false;
+const greeting2 = `Logged in: ${loggedIn ? "Yes" : "No"}`;
+console.log(greeting2);
