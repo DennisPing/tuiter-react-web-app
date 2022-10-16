@@ -33,11 +33,7 @@ const NavigationSidebar = () => {
             <span class="mx-2 d-none d-xl-inline-block">More</span>
         </a>
       </div>
-      <div class="d-grid mt-2">
-        <a href="../tuit.html"
-           class="btn btn-primary btn-block rounded-pill">
-           Tweet</a>
-      </div>
+      <a href="../tuit.html" class="btn btn-primary rounded-pill w-100 mt-2 px-0" href="#" role="button">Tweet</a>
     `;
 };
 export default NavigationSidebar;
