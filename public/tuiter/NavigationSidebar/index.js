@@ -42,7 +42,6 @@ const NavigationSidebar = () => {
 };
 export default NavigationSidebar;
 
-// Write NavigationSidebar to the id "wd-navigation-sidebar" in index.html
 $("#wd-nav-sidebar").append(`
     <div class="container">
         ${NavigationSidebar()}
