@@ -30,7 +30,7 @@ const ExploreComponent = () => {
           href="../../../tuiter/entertainment.html">Entertainment</a>
     </nav>
 
-    <div class="position-relative">
+    <div class="position-relative mb-2">
       <img src="../explore/images/Starship-Mk1-Day.webp"
           class="img-fluid mt-2 rounded-3">
       <div class="position-absolute bottom-0 ms-2">

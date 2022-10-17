@@ -23,7 +23,7 @@ const PostSummaryItem = (post) => {
               ${tweets}
           </div>
           <div class="col-3 col-md-2 align-self-center">
-              <img src=${post.image} class="rounded-3 float-end" height="80px">
+              <img src=${post.image} class="img-fluid rounded-3 float-end">
           </div>
       </div>
     </a>
