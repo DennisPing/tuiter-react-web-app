@@ -19,19 +19,19 @@ const ExploreComponent = () => {
 
     <nav class="nav nav-tabs">
       <a class="nav-link rounded-0 active"
-          href="../../../tuiter/for-you.html">For you</a>
+          href="../for-you.html">For you</a>
       <a class="nav-link rounded-0"
-          href="../../../tuiter/trending.html">Trending</a>
+          href="../trending.html">Trending</a>
       <a class="nav-link rounded-0"
-          href="../../../tuiter/news.html">News</a>
+          href="../news.html">News</a>
       <a class="nav-link rounded-0"
-          href="../../../tuiter/sports.html">Sports</a>
+          href="../sports.html">Sports</a>
       <a class="nav-link d-none d-md-block rounded-0"
-          href="../../../tuiter/entertainment.html">Entertainment</a>
+          href="../entertainment.html">Entertainment</a>
     </nav>
 
     <div class="position-relative mb-2">
-      <img src="../explore/images/Starship-Mk1-Day.webp"
+      <img src="./images/Starship-Mk1-Day.webp"
           class="img-fluid mt-2 rounded-3">
       <div class="position-absolute bottom-0 ms-2">
           <h2 class="fw-bold text-light">SpaceX's Starship</h2>
