@@ -31,7 +31,7 @@ const ExploreComponent = () => {
     </nav>
 
     <div class="position-relative mb-2">
-      <img src="./images/Starship-Mk1-Day.webp"
+      <img src="https://mushucdn.b-cdn.net/Starship-Mk1-Day.webp"
           class="img-fluid mt-2 rounded-3">
       <div class="position-absolute bottom-0 ms-2">
           <h2 class="fw-bold text-light">SpaceX's Starship</h2>
