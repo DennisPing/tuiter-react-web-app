@@ -16,5 +16,11 @@
         "userName": "SpaceX",
         "handle": "SpaceX",
         "avatarIcon": "https://mushucdn.b-cdn.net/spacex-logo.png"
+    },
+    {
+        "_id": 456,
+        "userName": "Crunchyroll",
+        "handle": "Crunchyroll",
+        "avatarIcon": "https://mushucdn.b-cdn.net/crunchyroll-logo.png"
     }
 ]

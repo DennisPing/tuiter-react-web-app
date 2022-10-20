@@ -1,18 +1,19 @@
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
+import "./index.css";
 
 const WhoToFollowListItem = ({ who }) => {
   return (
     <a href="#" className="list-group-item list-group-item-action px-2">
-      <div className="row">
+      <div className="row align-items-center wd-who-height">
         <div className="col-2 align-self-center">
-          <img src={who.avatarIcon} className="img-fluid rounded-circle" />
+          <img src={who.avatarIcon} className="img-fluid p-1 border-0 rounded-circle" />
         </div>
         <div className="col-6 px-0 text-nowrap">
           <div>
             <strong>{who.userName}&nbsp;</strong>
-            <FontAwesomeIcon icon={faCircleCheck} />
+            <FontAwesomeIcon icon={faCircleCheck} className="text-primary" />
           </div>
           <div>@{who.handle}</div>
         </div>

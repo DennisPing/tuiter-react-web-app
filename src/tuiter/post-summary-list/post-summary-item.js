@@ -10,7 +10,7 @@ const PostSummaryItem = ({ post }) => {
           <div className="text-secondary">{post.topic}</div>
           <div>
             <strong>{post.userName}&nbsp;</strong>
-            <FontAwesomeIcon icon={faCircleCheck} />
+            <FontAwesomeIcon icon={faCircleCheck} className="text-primary" />
             <span className="text-secondary"> - {post.time}</span>
           </div>
           <div className="">{post.title}</div>
