@@ -1,7 +1,6 @@
 import PostSummaryList from "../post-summary-list";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faGear } from "@fortawesome/free-solid-svg-icons";
-import "./index.css";
 
 const ExploreComponent = () => {
   return (

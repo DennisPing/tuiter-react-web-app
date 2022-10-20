@@ -1,0 +1,56 @@
+[
+    {
+        "id": "twitter",
+        "link": "#",
+        "icon": "bi bi-twitter fa-lg text-primary",
+        "text": ""
+    },
+    {
+        "id": "home",
+        "link": "#",
+        "icon": "bi bi-house-door fa-lg",
+        "text": "Home"
+    },
+    {
+        "id": "explore",
+        "link": "#",
+        "icon": "bi bi-hash fa-xl ps-2",
+        "text": "Explore"
+    },
+    {
+        "id": "notifications",
+        "link": "#",
+        "icon": "bi bi-bell fa-lg",
+        "text": "Notifications"
+    },
+    {
+        "id": "messages",
+        "link": "#",
+        "icon": "bi bi-envelope fa-lg",
+        "text": "Messages"
+    },
+    {
+        "id": "bookmarks",
+        "link": "#",
+        "icon": "bi bi-bookmark fa-lg",
+        "text": "Bookmarks"
+    },
+    {
+        "id": "lists",
+        "link": "#",
+        "icon": "bi bi-card-list fa-lg",
+        "text": "Lists"
+    },
+    {
+        "id": "profile",
+        "link": "#",
+        "icon": "bi bi-person fa-lg",
+        "text": "Profile"
+    },
+    {
+        "id": "more",
+        "link": "#",
+        "icon": "bi bi-filter-circle fa-lg",
+        "text": "More"
+    }
+]

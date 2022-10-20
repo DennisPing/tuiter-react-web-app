@@ -5,7 +5,7 @@ import WhoToFollowList from "./who-to-follow-list";
 function Tuiter() {
   return (
     <div className="row mt-2">
-      <div className="col-auto col-xl-2">
+      <div className="col-auto">
         <NavigationSidebar />
       </div>
       <div className="col col-lg-7 col-xl-6">
