@@ -1,4 +1,6 @@
 import PostSummaryList from "../post-summary-list";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass, faGear } from "@fortawesome/free-solid-svg-icons";
 import "./index.css";
 
 const ExploreComponent = () => {
@@ -13,11 +15,17 @@ const ExploreComponent = () => {
               id="searchBar"
               placeholder="Search Twitter"
             />
-            <i className="fa-solid fa-magnifying-glass position-absolute bottom-0 mb-2 h-50 ms-3"></i>
+            <FontAwesomeIcon
+              icon={faMagnifyingGlass}
+              className="position-absolute bottom-0 mb-2 h-50 ms-3 text-secondary"
+            />
           </div>
         </div>
-        <div className="px-2 align-self-center">
-          <i className="fa-solid fa-gear fa-2x text-primary float-end"></i>
+        <div className="ps-3 align-self-center">
+          <FontAwesomeIcon
+            icon={faGear}
+            className="fa-2x text-primary float-end"
+          />
         </div>
       </div>
 

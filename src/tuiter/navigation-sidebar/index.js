@@ -11,12 +11,16 @@ import {
   faEllipsis,
 } from "@fortawesome/free-solid-svg-icons";
 import { faCircle } from "@fortawesome/free-regular-svg-icons";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 const NavigationSidebar = ({ active = "explore" }) => {
   return (
     <div className="list-group rounded-3">
       <a href="#" className="list-group-item list-group-item-action">
-        Tuiter
+        <FontAwesomeIcon
+          icon={faTwitter}
+          className="text-primary align-middle"
+        />
       </a>
       <a
         href="#"

@@ -1,4 +1,6 @@
 import PropTypes from "prop-types";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 
 const PostSummaryItem = ({ post }) => {
   return (
@@ -7,8 +9,8 @@ const PostSummaryItem = ({ post }) => {
         <div className="col-9 col-md-10 px-2">
           <div className="text-secondary">{post.topic}</div>
           <div>
-            <span className="fw-bolder">{post.userName}</span>
-            <i className="fa-solid fa-circle-check"></i>
+            <span className="fw-bolder">{post.userName}&nbsp;</span>
+            <FontAwesomeIcon icon={faCircleCheck} />
             <span className="text-secondary"> - {post.time}</span>
           </div>
           <div className="">{post.title}</div>
