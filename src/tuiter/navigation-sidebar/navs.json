@@ -14,7 +14,7 @@
     {
         "id": "explore",
         "link": "#",
-        "icon": "bi bi-hash fa-xl ps-2",
+        "icon": "bi bi-hash fa-lg",
         "text": "Explore"
     },
     {

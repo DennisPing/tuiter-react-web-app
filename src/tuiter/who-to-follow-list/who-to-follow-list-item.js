@@ -15,10 +15,12 @@ const WhoToFollowListItem = ({ who }) => {
             <strong>{who.userName}&nbsp;</strong>
             <FontAwesomeIcon icon={faCircleCheck} className="text-primary" />
           </div>
-          <div>@{who.handle}</div>
+          <div className="text-secondary">@{who.handle}</div>
         </div>
         <div className="col-4 align-self-center">
-          <button className="btn btn-primary rounded-pill float-end">Follow</button>
+          <button type="button" className="btn btn-primary rounded-pill float-end">
+            Follow
+          </button>
         </div>
       </div>
     </a>
