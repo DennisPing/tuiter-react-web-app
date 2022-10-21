@@ -21,10 +21,7 @@ const ExploreComponent = () => {
           </div>
         </div>
         <div className="ps-3 align-self-center">
-          <FontAwesomeIcon
-            icon={faGear}
-            className="fa-2x text-primary float-end"
-          />
+          <FontAwesomeIcon icon={faGear} className="fa-2x text-primary float-end" />
         </div>
       </div>
 
@@ -49,7 +46,7 @@ const ExploreComponent = () => {
       <div className="position-relative mb-2">
         <img
           src="https://mushucdn.b-cdn.net/Starship-Mk1-Day.webp"
-          className="img-fluid mt-2 rounded-3"
+          className="img-fluid mt-2 rounded-4"
         />
         <div className="position-absolute bottom-0 ms-2">
           <h2 className="fw-bold text-light">SpaceX Starship</h2>

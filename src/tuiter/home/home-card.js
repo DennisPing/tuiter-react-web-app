@@ -7,7 +7,7 @@ const ImageCaption = ({ card }) => {
   if (card.imageTitle) {
     return (
       <div className="card my-2 rounded-4">
-        <img src={card.image} className="card-img-top rounded-bottom rounded-4" alt="..." />
+        <img src={card.image} className="card-img-top wd-rounded-corners" />
         <div className="card-body pt-2">
           <div className="card-link text-secondary text-decoration-none">{card.imageDomain}</div>
           <h5 className="card-title mb-1">{card.imageTitle}</h5>
@@ -16,14 +16,14 @@ const ImageCaption = ({ card }) => {
       </div>
     );
   } else {
-    return <img src={card.image} className="img-fluid rounded-4 my-2" alt="..." />;
+    return <img src={card.image} className="img-fluid rounded-4 my-2" />;
   }
 };
 
 const HomeCard = ({ card }) => {
   return (
     <a href={card.link} className="list-group-item list-group-item-action">
-      <div className="row mb-2">
+      <div className="row my-2">
         <div className="col-auto py-1">
           <img src={card.avatarIcon} className="wd-icon-width rounded-circle" />
         </div>
@@ -37,7 +37,7 @@ const HomeCard = ({ card }) => {
           </div>
           <div>{card.title}</div>
           <ImageCaption card={card} />
-          <div className="d-flex tex-secondary">
+          <div className="d-flex text-secondary">
             <div className="flex-fill">
               <i className="bi bi-chat"></i>
               <span className="ms-2">{card.comments}</span>

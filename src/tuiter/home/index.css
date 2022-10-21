@@ -1,3 +1,9 @@
 .wd-icon-width {
   width: 48px;
 }
+
+/* There's a bug in react bootstrap with rounded corners for cards */
+.wd-rounded-corners {
+  border-top-left-radius: 1rem !important;
+  border-top-right-radius: 1rem !important;
+}

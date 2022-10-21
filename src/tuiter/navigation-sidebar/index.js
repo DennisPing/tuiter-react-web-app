@@ -34,8 +34,4 @@ NavSidebarList.propTypes = {
   active: PropTypes.string,
 };
 
-NavigationSidebar.propTypes = {
-  active: PropTypes.string,
-};
-
 export default NavigationSidebar;
