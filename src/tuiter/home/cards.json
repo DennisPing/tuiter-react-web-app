@@ -1,0 +1,45 @@
+[
+    {
+        "id": 1,
+        "avatarIcon": "https://mushucdn.b-cdn.net/crunchyroll-logo.png",
+        "username": "Crunchyroll",
+        "handle": "Crunchyroll",
+        "time": "16h",
+        "title": "New amazing shows coming this Fall 2022",
+        "link": "https://www.crunchyroll.com/anime-news/2022/09/21/crunchyroll-announces-fall-2022-anime-lineup",
+        "image": "https://mushucdn.b-cdn.net/crunchyroll-thumbnail.png",
+        "imageTitle": "Crunchyroll Fall 2022 Lineup",
+        "imageText": "Charge up with some of the most anticipated anime adaptations to date with Chainsaw Man and BLUELOCK! Familiar favorites will also electrify as SPY x FAMILY, My Hero Academia Season 6 and Mob Psycho 100 III make their return with new episodes!",
+        "imageDomain": "crunchyroll.com",
+        "imageLink": "https://www.crunchyroll.com/anime-news/2022/09/21/crunchyroll-announces-fall-2022-anime-lineup?utm_source=community_cr&utm_medium=twitter&utm_campaign=q4-2022_en&referrer=community_cr_twitter_q4-2022",
+        "comments": "850",
+        "retweets": "3.5k",
+        "likes": "37.5k"
+    },
+    {
+        "id": 2,
+        "avatarIcon": "https://mushucdn.b-cdn.net/nba-logo.jpg",
+        "username": "NBA",
+        "handle": "NBA",
+        "time": "12h",
+        "title": "5 Takeaways from Pelicans' Season-Opening Victory in Brooklyn",
+        "link": "https://www.nba.com/news/5-takeaways-pelicans-nets",
+        "image": "https://mushucdn.b-cdn.net/zion-opening-night.jpg",
+        "comments": "1.2k",
+        "retweets": "2.5k",
+        "likes": "5.5k"
+    },
+    {
+        "id": 3,
+        "avatarIcon": "https://mushucdn.b-cdn.net/espn-E-logo.png",
+        "username": "ESPN",
+        "handle": "espn",
+        "time": "2d",
+        "title": "After a 26-17 victory over the Vikings, undefeated Eagles showing all the signs of a Super Bowl contender",
+        "link": "https://www.espn.com/blog/philadelphia-eagles/post/_/id/33214/philly-is-lit-undefeated-eagles-showing-all-the-signs-of-a-super-bowl-contender",
+        "image": "https://mushucdn.b-cdn.net/eagles-jalen-hurts.webp",
+        "comments": "970",
+        "retweets": "6.4k",
+        "likes": "25k"
+    }
+]

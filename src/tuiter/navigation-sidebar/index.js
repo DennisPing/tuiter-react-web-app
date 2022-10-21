@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import NavSidebarItem from "./nav-sidebar-item";
 import navArray from "./navs.json";
+import { useLocation } from "react-router";
 
 const NavSidebarList = ({ active }) => {
   return (
@@ -12,10 +13,13 @@ const NavSidebarList = ({ active }) => {
   );
 };
 
-const NavigationSidebar = ({ active = "explore" }) => {
+const NavigationSidebar = () => {
+  const { pathname } = useLocation();
+  const paths = pathname.split("/");
+  const active = paths[2];
   return (
     <>
-      <div className="list-group rounded-3">
+      <div className="list-group rounded-4">
         <NavSidebarList active={active} />
       </div>
       <a href="#" className="btn btn-primary rounded-pill w-100 mt-2" role="button">

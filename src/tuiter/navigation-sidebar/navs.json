@@ -1,56 +1,62 @@
 [
     {
         "id": "twitter",
-        "link": "#",
+        "link": "/tuiter/home",
         "icon": "bi bi-twitter fa-lg text-primary",
         "text": ""
     },
     {
         "id": "home",
-        "link": "#",
+        "link": "/tuiter/home",
         "icon": "bi bi-house-door fa-lg",
         "text": "Home"
     },
     {
         "id": "explore",
-        "link": "#",
+        "link": "/tuiter/explore",
         "icon": "bi bi-hash fa-lg",
         "text": "Explore"
     },
     {
         "id": "notifications",
-        "link": "#",
+        "link": "/tuiter/notifications",
         "icon": "bi bi-bell fa-lg",
         "text": "Notifications"
     },
     {
         "id": "messages",
-        "link": "#",
+        "link": "/tuiter/messages",
         "icon": "bi bi-envelope fa-lg",
         "text": "Messages"
     },
     {
         "id": "bookmarks",
-        "link": "#",
+        "link": "/tuiter/bookmarks",
         "icon": "bi bi-bookmark fa-lg",
         "text": "Bookmarks"
     },
     {
         "id": "lists",
-        "link": "#",
+        "link": "/tuiter/lists",
         "icon": "bi bi-card-list fa-lg",
         "text": "Lists"
     },
     {
         "id": "profile",
-        "link": "#",
+        "link": "/tuiter/profile",
         "icon": "bi bi-person fa-lg",
         "text": "Profile"
     },
     {
         "id": "more",
-        "link": "#",
+        "link": "/tuiter/more",
         "icon": "bi bi-filter-circle fa-lg",
         "text": "More"
+    },
+    {
+        "id": "labs",
+        "link": "/",
+        "icon": "bi bi-terminal fa-lg",
+        "text": "Labs"
     }
 ]
