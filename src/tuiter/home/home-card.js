@@ -8,10 +8,8 @@ const ImageCaption = ({ card }) => {
     return (
       <div className="card my-2 rounded-4">
         <img src={card.image} className="card-img-top rounded-bottom rounded-4" alt="..." />
-        <div className="card-body">
-          <a href={card.imageLink} className="card-link text-secondary text-decoration-none">
-            {card.imageDomain}
-          </a>
+        <div className="card-body pt-2">
+          <div className="card-link text-secondary text-decoration-none">{card.imageDomain}</div>
           <h5 className="card-title mb-1">{card.imageTitle}</h5>
           <p className="card-text text-secondary">{card.imageText}</p>
         </div>
