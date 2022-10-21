@@ -6,7 +6,7 @@ import { Routes, Route } from "react-router";
 
 function Tuiter() {
   return (
-    <div className="row my-2">
+    <div className="row">
       <div className="col-auto">
         <NavigationSidebar />
       </div>
