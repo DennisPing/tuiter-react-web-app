@@ -7,17 +7,17 @@ const WhoToFollowListItem = ({ who }) => {
   return (
     <a href="#" className="list-group-item list-group-item-action px-2">
       <div className="row align-items-center wd-who-height">
-        <div className="col-2 align-self-center">
-          <img src={who.avatarIcon} className="img-fluid p-1 border-0 rounded-circle" />
+        <div className="col-auto align-self-center">
+          <img src={who.avatarIcon} className="wd-icon-width rounded-circle" />
         </div>
-        <div className="col-6 px-0 text-nowrap">
+        <div className="col px-0 text-nowrap">
           <div>
             <strong>{who.userName}&nbsp;</strong>
             <FontAwesomeIcon icon={faCircleCheck} className="text-primary" />
           </div>
           <div className="text-secondary">@{who.handle}</div>
         </div>
-        <div className="col-4 align-self-center">
+        <div className="col align-self-center">
           <button type="button" className="btn btn-primary rounded-pill float-end">
             Follow
           </button>
