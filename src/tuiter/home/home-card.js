@@ -21,13 +21,31 @@ const ImageCaption = ({ card }) => {
 };
 
 const HomeCard = ({ card }) => {
+  let socialType = <></>;
+  let socialName = <></>;
+  if (card.socialAction) {
+    socialType = (
+      <div>
+        <i className="bi bi-repeat small text-secondary float-end" />
+      </div>
+    );
+    socialName = (
+      <div className="small text-secondary fw-bold">{card.socialAction.username} Retweeted</div>
+    );
+  }
+
   return (
-    <a href={card.link} className="list-group-item list-group-item-action">
-      <div className="row my-2">
-        <div className="col-auto py-1">
-          <img src={card.avatarIcon} className="wd-icon-width rounded-circle" />
+    <a href={card.link} className="list-group-item list-group-item-action py-3">
+      <div className="row">
+        <div className="col-auto">
+          {socialType}
+          <img
+            src={card.avatarIcon}
+            className="wd-icon-width rounded-circle row justify-content-center mx-0"
+          />
         </div>
         <div className="col ps-0">
+          {socialName}
           <div className="align-items-center">
             <span className="fw-bold me-1">{card.username}</span>
             <FontAwesomeIcon icon={faCircleCheck} className="text-primary me-1" />
@@ -39,19 +57,19 @@ const HomeCard = ({ card }) => {
           <ImageCaption card={card} />
           <div className="d-flex text-secondary">
             <div className="flex-fill">
-              <i className="bi bi-chat"></i>
+              <i className="bi bi-chat" />
               <span className="ms-2">{card.comments}</span>
             </div>
             <div className="flex-fill">
-              <i className="bi bi-repeat"></i>
+              <i className="bi bi-repeat" />
               <span className="ms-2">{card.retweets}</span>
             </div>
             <div className="flex-fill">
-              <i className="bi bi-heart"></i>
+              <i className="bi bi-heart" />
               <span className="ms-2">{card.likes}</span>
             </div>
             <div className="flex-fill">
-              <i className="bi bi-upload"></i>
+              <i className="bi bi-upload" />
             </div>
           </div>
         </div>
@@ -60,7 +78,7 @@ const HomeCard = ({ card }) => {
   );
 };
 
-ImageCaption.propTypes = {
+HomeCard.propTypes = {
   card: PropTypes.shape({
     avatarIcon: PropTypes.string,
     username: PropTypes.string,
@@ -76,9 +94,13 @@ ImageCaption.propTypes = {
     comments: PropTypes.string,
     retweets: PropTypes.string,
     likes: PropTypes.string,
+    socialAction: PropTypes.objectOf({
+      type: PropTypes.string,
+      username: PropTypes.string,
+    }),
   }),
 };
 
-HomeCard.propTypes = ImageCaption.propTypes;
+ImageCaption.propTypes = HomeCard.propTypes;
 
 export default HomeCard;

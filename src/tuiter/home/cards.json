@@ -26,7 +26,11 @@
         "image": "https://mushucdn.b-cdn.net/zion-opening-night.jpg",
         "comments": "1.2k",
         "retweets": "2.5k",
-        "likes": "5.5k"
+        "likes": "5.5k",
+        "socialAction": {
+            "type": "retweet",
+            "username": "Dennis Ping"
+        }
     },
     {
         "id": 3,
@@ -39,6 +43,10 @@
         "image": "https://mushucdn.b-cdn.net/eagles-jalen-hurts.webp",
         "comments": "970",
         "retweets": "6.4k",
-        "likes": "25k"
+        "likes": "25k",
+        "socialAction": {
+            "type": "like",
+            "username": "Anya Forger"
+        }
     }
 ]

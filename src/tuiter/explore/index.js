@@ -26,19 +26,19 @@ const ExploreComponent = () => {
       </div>
 
       <nav className="nav nav-pills nav-fill mt-2">
-        <a className="nav-link active" href="../for-you.html">
+        <a className="nav-link active" href="#">
           For you
         </a>
-        <a className="nav-link" href="../trending.html">
+        <a className="nav-link" href="#">
           Trending
         </a>
-        <a className="nav-link" href="../news.html">
+        <a className="nav-link" href="#">
           News
         </a>
-        <a className="nav-link" href="../sports.html">
+        <a className="nav-link" href="#">
           Sports
         </a>
-        <a className="nav-link d-none d-md-block" href="../entertainment.html">
+        <a className="nav-link d-none d-md-block" href="#">
           Entertainment
         </a>
       </nav>
