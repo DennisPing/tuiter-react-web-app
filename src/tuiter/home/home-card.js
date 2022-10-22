@@ -20,25 +20,44 @@ const ImageCaption = ({ card }) => {
   }
 };
 
+const SocialIcon = ({ socialAction }) => {
+  let icon = "";
+  switch (socialAction.action) {
+    case "retweeted":
+      icon = "bi bi-repeat";
+      break;
+    case "liked":
+      icon = "bi bi-heart-fill";
+      break;
+    case "follows":
+      icon = "bi bi-person-fill";
+      break;
+  }
+  return (
+    <div>
+      <i className={`${icon} small text-secondary float-end`} />
+    </div>
+  );
+};
+
+const SocialName = ({ socialAction }) => {
+  return (
+    <div className="small text-secondary fw-bold">{`${socialAction.username} ${socialAction.action}`}</div>
+  );
+};
+
 const HomeCard = ({ card }) => {
-  let socialType = <></>;
+  let socialIcon = <></>;
   let socialName = <></>;
   if (card.socialAction) {
-    socialType = (
-      <div>
-        <i className="bi bi-repeat small text-secondary float-end" />
-      </div>
-    );
-    socialName = (
-      <div className="small text-secondary fw-bold">{card.socialAction.username} Retweeted</div>
-    );
+    socialIcon = <SocialIcon socialAction={card.socialAction} />;
+    socialName = <SocialName socialAction={card.socialAction} />;
   }
-
   return (
     <a href={card.link} className="list-group-item list-group-item-action py-3">
       <div className="row">
         <div className="col-auto">
-          {socialType}
+          {socialIcon}
           <img
             src={card.avatarIcon}
             className="wd-icon-width rounded-circle row justify-content-center mx-0"
@@ -94,13 +113,21 @@ HomeCard.propTypes = {
     comments: PropTypes.string,
     retweets: PropTypes.string,
     likes: PropTypes.string,
-    socialAction: PropTypes.objectOf({
-      type: PropTypes.string,
+    socialAction: PropTypes.shape({
+      action: PropTypes.string,
       username: PropTypes.string,
     }),
   }),
 };
 
+SocialIcon.propTypes = {
+  socialAction: PropTypes.shape({
+    action: PropTypes.string,
+    username: PropTypes.string,
+  }),
+};
+
+SocialName.propTypes = SocialIcon.propTypes;
 ImageCaption.propTypes = HomeCard.propTypes;
 
 export default HomeCard;

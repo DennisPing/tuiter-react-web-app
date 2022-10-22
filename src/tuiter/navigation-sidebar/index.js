@@ -15,7 +15,6 @@ const NavSidebarList = ({ active }) => {
 
 const NavigationSidebar = () => {
   const { pathname } = useLocation();
-  console.log(pathname);
   const paths = pathname.split("/");
   const active = paths[2];
   return (

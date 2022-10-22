@@ -28,7 +28,7 @@
         "retweets": "2.5k",
         "likes": "5.5k",
         "socialAction": {
-            "type": "retweet",
+            "action": "retweeted",
             "username": "Dennis Ping"
         }
     },
@@ -45,8 +45,28 @@
         "retweets": "6.4k",
         "likes": "25k",
         "socialAction": {
-            "type": "like",
+            "action": "liked",
             "username": "Anya Forger"
+        }
+    },
+    {
+        "id": 4,
+        "avatarIcon": "https://mushucdn.b-cdn.net/starbucks-logo.png",
+        "username": "Starbucks",
+        "handle": "Starbucks",
+        "time": "1d",
+        "title": "Starbucks Shares Shift in Strategy, to Automation and Expansion",
+        "link": "https://www.nytimes.com/2022/09/13/business/starbucks-reinvention-strategy-employees.html",
+        "image": "https://static01.nyt.com/images/2022/09/13/business/13starbucks-01/merlin_213065712_9ccf5b24-a250-4ed3-99e5-9bda0a531100-superJumbo.jpg?quality=75&auto=webp",
+        "imageTitle": "Starbucks Shares Shift in Strategy, to Automation and Expansion",
+        "imageText": "The coffee giant intends to speed up drink-making and open thousands of additional locations in China over the next three years.",
+        "imageDomain": "nytimes.com",
+        "comments": "95",
+        "retweets": "147",
+        "likes": "8.8k",
+        "socialAction": {
+            "action": "follows",
+            "username": "Steve Harrington"
         }
     }
 ]
