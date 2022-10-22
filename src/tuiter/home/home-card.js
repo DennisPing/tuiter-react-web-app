@@ -6,9 +6,9 @@ import "./index.css";
 const ImageCaption = ({ card }) => {
   if (card.imageTitle) {
     return (
-      <div className="card my-2 rounded-4">
-        <img src={card.image} className="card-img-top wd-rounded-corners" />
-        <div className="card-body pt-2">
+      <div className="card my-2 border-0">
+        <img src={card.image} className="card-img-top wd-top-rounded-corners" />
+        <div className="card-body pt-2 border-start border-end border-bottom wd-bottom-rounded-corners">
           <div className="card-link text-secondary text-decoration-none">{card.imageDomain}</div>
           <h5 className="card-title mb-1">{card.imageTitle}</h5>
           <p className="card-text text-secondary">{card.imageText}</p>

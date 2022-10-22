@@ -2,8 +2,12 @@
   width: 48px;
 }
 
-/* There's a bug in react bootstrap with rounded corners for cards */
-.wd-rounded-corners {
+.wd-top-rounded-corners {
   border-top-left-radius: 1rem !important;
   border-top-right-radius: 1rem !important;
+}
+
+.wd-bottom-rounded-corners {
+  border-bottom-left-radius: 1rem !important;
+  border-bottom-right-radius: 1rem !important;
 }
