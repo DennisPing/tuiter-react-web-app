@@ -10,14 +10,14 @@ function Tuiter() {
       <div className="col-auto">
         <NavigationSidebar />
       </div>
-      <div className="col col-lg-7 col-xl-6">
+      <div className="col col-xl-6">
         <Routes>
           <Route path="/" element={<HomeComponent />} />
           <Route path="home" element={<HomeComponent />} />
           <Route path="explore" element={<ExploreComponent />} />
         </Routes>
       </div>
-      <div className="col d-none d-lg-block">
+      <div className="col col-lg-auto col-xl d-none d-lg-block">
         <WhoToFollowList />
       </div>
     </div>

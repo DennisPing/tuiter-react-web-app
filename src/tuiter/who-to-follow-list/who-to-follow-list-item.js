@@ -5,7 +5,7 @@ import "./index.css";
 
 const WhoToFollowListItem = ({ who }) => {
   return (
-    <a href="#" className="list-group-item list-group-item-action px-2">
+    <a href="#" className="list-group-item list-group-item-action px-3">
       <div className="row align-items-center wd-who-height">
         <div className="col-auto align-self-center">
           <img src={who.avatarIcon} className="wd-icon-width rounded-circle" />
@@ -17,7 +17,7 @@ const WhoToFollowListItem = ({ who }) => {
           </div>
           <div className="text-secondary">@{who.handle}</div>
         </div>
-        <div className="col align-self-center">
+        <div className="col-auto align-self-center">
           <button type="button" className="btn btn-primary rounded-pill float-end">
             Follow
           </button>
