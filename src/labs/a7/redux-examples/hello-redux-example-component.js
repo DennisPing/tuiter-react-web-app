@@ -1,4 +1,4 @@
-import { useSelector } from "redux-react";
+import { useSelector } from "react-redux";
 
 const HelloReduxExampleComponent = () => {
   const message = useSelector((hello) => hello.message);
