@@ -1,26 +1,38 @@
+import { Routes, Route } from "react-router";
+import { Provider } from "react-redux";
+import { configureStore } from "@reduxjs/toolkit";
+
 import ExploreComponent from "./explore";
 import NavigationSidebar from "./navigation-sidebar";
 import WhoToFollowList from "./who-to-follow-list";
 import HomeComponent from "./home";
-import { Routes, Route } from "react-router";
+import whoReducer from "./reducers/who-reducer";
+
+const store = configureStore({
+  reducer: {
+    who: whoReducer,
+  },
+});
 
 function Tuiter() {
   return (
-    <div className="row">
-      <div className="col-auto">
-        <NavigationSidebar />
+    <Provider store={store}>
+      <div className="row">
+        <div className="col-auto">
+          <NavigationSidebar />
+        </div>
+        <div className="col col-xl-6">
+          <Routes>
+            <Route path="/" element={<HomeComponent />} />
+            <Route path="home" element={<HomeComponent />} />
+            <Route path="explore" element={<ExploreComponent />} />
+          </Routes>
+        </div>
+        <div className="col col-lg-auto col-xl d-none d-lg-block">
+          <WhoToFollowList />
+        </div>
       </div>
-      <div className="col col-xl-6">
-        <Routes>
-          <Route path="/" element={<HomeComponent />} />
-          <Route path="home" element={<HomeComponent />} />
-          <Route path="explore" element={<ExploreComponent />} />
-        </Routes>
-      </div>
-      <div className="col col-lg-auto col-xl d-none d-lg-block">
-        <WhoToFollowList />
-      </div>
-    </div>
+    </Provider>
   );
 }
 export default Tuiter;
