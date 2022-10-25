@@ -7,7 +7,7 @@ const TuitList = () => {
   return (
     <div className="list-group rounded-4">
       {tuitsArray.map((tuit) => (
-        <TuitItem key={tuit.id} tuit={tuit} />
+        <TuitItem key={tuit._id} tuit={tuit} />
       ))}
     </div>
   );

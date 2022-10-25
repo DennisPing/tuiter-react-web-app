@@ -1,12 +1,23 @@
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
+
+import TuitStat from "./tuit-stats";
 import "./index.css";
 
 const ImageCaption = ({ tuit }) => {
-  if (tuit.imageTitle) {
+  // No image
+  if (!tuit.image) {
+    return <></>;
+  }
+  // Just an image
+  else if (!tuit.imageTitle) {
+    return <img src={tuit.image} className="img-fluid rounded-4 border mb-2" />;
+  }
+  // Image with caption
+  else {
     return (
-      <div className="card my-2 border-0 rounded-4">
+      <div className="card mb-2 border-0 rounded-4">
         <img src={tuit.image} className="card-img-top border wd-top-rounded-corners" />
         <div className="card-body pt-2 border-start border-end border-bottom wd-bottom-rounded-corners">
           <div className="card-link text-secondary text-decoration-none">{tuit.imageDomain}</div>
@@ -15,8 +26,6 @@ const ImageCaption = ({ tuit }) => {
         </div>
       </div>
     );
-  } else {
-    return <img src={tuit.image} className="img-fluid rounded-4 border my-2" />;
   }
 };
 
@@ -46,6 +55,13 @@ const SocialName = ({ socialAction }) => {
   );
 };
 
+const Verified = ({ verified }) => {
+  if (verified) {
+    return <FontAwesomeIcon icon={faCircleCheck} className="text-primary me-1" />;
+  }
+  return <></>;
+};
+
 const TuitItem = ({ tuit }) => {
   let socialIcon = <></>;
   let socialName = <></>;
@@ -53,6 +69,7 @@ const TuitItem = ({ tuit }) => {
     socialIcon = <SocialIcon socialAction={tuit.socialAction} />;
     socialName = <SocialName socialAction={tuit.socialAction} />;
   }
+
   return (
     <a href={tuit.link} className="list-group-item list-group-item-action py-3">
       <div className="row">
@@ -67,30 +84,19 @@ const TuitItem = ({ tuit }) => {
           {socialName}
           <div className="align-items-center">
             <span className="fw-bold me-1">{tuit.username}</span>
-            <FontAwesomeIcon icon={faCircleCheck} className="text-primary me-1" />
+            <Verified verified={tuit.verified} />
             <span className="text-secondary me-1">@{tuit.handle}</span>
             <span className="text-secondary"> - {tuit.time}</span>
             <i className="bi bi-three-dots text-secondary fs-5 float-end" />
           </div>
-          <div>{tuit.title}</div>
+          <div className="mb-2">{tuit.title}</div>
           <ImageCaption tuit={tuit} />
-          <div className="d-flex text-secondary">
-            <div className="flex-fill">
-              <i className="bi bi-chat" />
-              <span className="ms-2">{tuit.comments}</span>
-            </div>
-            <div className="flex-fill">
-              <i className="bi bi-repeat" />
-              <span className="ms-2">{tuit.retweets}</span>
-            </div>
-            <div className="flex-fill">
-              <i className="bi bi-heart" />
-              <span className="ms-2">{tuit.likes}</span>
-            </div>
-            <div className="flex-fill">
-              <i className="bi bi-upload" />
-            </div>
-          </div>
+          <TuitStat
+            comments={tuit.comments}
+            retweets={tuit.retweets}
+            likes={tuit.likes}
+            liked={tuit.liked}
+          />
         </div>
       </div>
     </a>
@@ -110,13 +116,15 @@ TuitItem.propTypes = {
     imageText: PropTypes.string,
     imageDomain: PropTypes.string,
     imageLink: PropTypes.string,
-    comments: PropTypes.string,
-    retweets: PropTypes.string,
-    likes: PropTypes.string,
+    comments: PropTypes.number,
+    retweets: PropTypes.number,
+    likes: PropTypes.number,
+    liked: PropTypes.bool,
     socialAction: PropTypes.shape({
       action: PropTypes.string,
       username: PropTypes.string,
     }),
+    verified: PropTypes.bool,
   }),
 };
 
@@ -125,6 +133,10 @@ SocialIcon.propTypes = {
     action: PropTypes.string,
     username: PropTypes.string,
   }),
+};
+
+Verified.propTypes = {
+  verified: PropTypes.bool,
 };
 
 SocialName.propTypes = SocialIcon.propTypes;
