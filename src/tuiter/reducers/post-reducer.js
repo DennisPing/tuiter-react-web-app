@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
-import postArray from "../data/posts.json";
+import postsArray from "../data/posts.json";
 
 const postSlice = createSlice({
   name: "post",
-  initialState: postArray,
+  initialState: postsArray,
 });
 
 export default postSlice.reducer;
