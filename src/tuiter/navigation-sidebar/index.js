@@ -22,8 +22,8 @@ const NavigationSidebar = () => {
       <div className="list-group rounded-4">
         <NavSidebarList active={active} />
       </div>
-      <a href="#" className="btn btn-primary rounded-pill w-100 mt-2" role="button">
-        Tweet
+      <a href="#" className="btn btn-primary rounded-pill fw-bold w-100 mt-2" role="button">
+        Tuit
       </a>
     </>
   );

@@ -18,7 +18,7 @@ const WhoToFollowListItem = ({ who }) => {
           <div className="text-secondary">@{who.handle}</div>
         </div>
         <div className="col-auto align-self-center">
-          <button type="button" className="btn btn-primary rounded-pill float-end">
+          <button type="button" className="btn btn-primary rounded-pill fw-bold float-end">
             Follow
           </button>
         </div>

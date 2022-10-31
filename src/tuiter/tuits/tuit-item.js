@@ -5,24 +5,26 @@ import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import TuitStat from "./tuit-stats";
 import "./index.css";
 
-const ImageCaption = ({ tuit }) => {
+const MediaContent = ({ tuit }) => {
   // No image
   if (!tuit.image) {
     return <></>;
   }
   // Just an image
-  else if (!tuit.imageTitle) {
+  else if (!tuit.mediaCard) {
     return <img src={tuit.image} className="img-fluid rounded-4 border mb-2" />;
   }
-  // Image with caption
+  // Image with media card
   else {
     return (
       <div className="card mb-2 border-0 rounded-4">
         <img src={tuit.image} className="card-img-top border wd-top-rounded-corners" />
         <div className="card-body pt-2 border-start border-end border-bottom wd-bottom-rounded-corners">
-          <div className="card-link text-secondary text-decoration-none">{tuit.imageDomain}</div>
-          <h5 className="card-title mb-1">{tuit.imageTitle}</h5>
-          <p className="card-text text-secondary">{tuit.imageText}</p>
+          <div className="card-link text-secondary text-decoration-none">
+            {tuit.mediaCard.imageDomain}
+          </div>
+          <h5 className="card-title mb-1">{tuit.mediaCard.mediaTitle}</h5>
+          <p className="card-text text-secondary">{tuit.mediaCard.mediaText}</p>
         </div>
       </div>
     );
@@ -75,10 +77,7 @@ const TuitItem = ({ tuit }) => {
       <div className="row">
         <div className="col-auto">
           {socialIcon}
-          <img
-            src={tuit.avatarIcon}
-            className="wd-icon-width rounded-circle row justify-content-center mx-0"
-          />
+          <img src={tuit.avatarIcon} className="wd-icon-width rounded-circle" />
         </div>
         <div className="col ps-0">
           {socialName}
@@ -90,7 +89,7 @@ const TuitItem = ({ tuit }) => {
             <i className="bi bi-three-dots text-secondary fs-5 float-end" />
           </div>
           <div className="mb-2">{tuit.title}</div>
-          <ImageCaption tuit={tuit} />
+          <MediaContent tuit={tuit} />
           <TuitStat
             comments={tuit.comments}
             retweets={tuit.retweets}
@@ -105,41 +104,42 @@ const TuitItem = ({ tuit }) => {
 
 TuitItem.propTypes = {
   tuit: PropTypes.shape({
-    avatarIcon: PropTypes.string,
-    username: PropTypes.string,
-    handle: PropTypes.string,
-    time: PropTypes.string,
+    avatarIcon: PropTypes.string.isRequired,
+    username: PropTypes.string.isRequired,
+    handle: PropTypes.string.isRequired,
+    time: PropTypes.string.isRequired,
     title: PropTypes.string,
     link: PropTypes.string,
     image: PropTypes.string,
-    imageTitle: PropTypes.string,
-    imageText: PropTypes.string,
-    imageDomain: PropTypes.string,
-    imageLink: PropTypes.string,
-    comments: PropTypes.number,
-    retweets: PropTypes.number,
-    likes: PropTypes.number,
-    liked: PropTypes.bool,
-    socialAction: PropTypes.shape({
-      action: PropTypes.string,
-      username: PropTypes.string,
+    mediaCard: PropTypes.shape({
+      mediaTitle: PropTypes.string.isRequired,
+      mediaText: PropTypes.string.isRequired,
+      mediaDomain: PropTypes.string.isRequired,
     }),
-    verified: PropTypes.bool,
+    comments: PropTypes.number.isRequired,
+    retweets: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+    liked: PropTypes.bool.isRequired,
+    socialAction: PropTypes.shape({
+      action: PropTypes.string.isRequired,
+      username: PropTypes.string.isRequired,
+    }),
+    verified: PropTypes.bool.isRequired,
   }),
 };
 
 SocialIcon.propTypes = {
   socialAction: PropTypes.shape({
-    action: PropTypes.string,
-    username: PropTypes.string,
+    action: PropTypes.string.isRequired,
+    username: PropTypes.string.isRequired,
   }),
 };
 
 Verified.propTypes = {
-  verified: PropTypes.bool,
+  verified: PropTypes.bool.isRequired,
 };
 
 SocialName.propTypes = SocialIcon.propTypes;
-ImageCaption.propTypes = TuitItem.propTypes;
+MediaContent.propTypes = TuitItem.propTypes;
 
 export default TuitItem;

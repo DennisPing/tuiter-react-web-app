@@ -6,7 +6,9 @@ const NavSidebarItem = ({ active, nav }) => {
   return (
     <Link
       to={nav.link}
-      className={`list-group-item list-group-item-action py-3 ${active === nav.id ? "active" : ""}`}
+      className={`list-group-item list-group-item-action py-3 ${
+        active === nav.id ? "active fw-bold" : ""
+      }`}
     >
       <div className="row align-items-center">
         <i className={`col-3 ${nav.icon}`} />

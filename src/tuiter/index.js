@@ -5,7 +5,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import ExploreComponent from "./explore";
 import NavigationSidebar from "./navigation-sidebar";
 import WhoToFollowList from "./who-to-follow-list";
-import TuitList from "./tuits";
+import HomeComponent from "./home";
 import whoReducer from "./reducers/who-reducer";
 import postReducer from "./reducers/post-reducer";
 import tuitReducer from "./reducers/tuit-reducer";
@@ -27,8 +27,8 @@ function Tuiter() {
         </div>
         <div className="col col-xl-6">
           <Routes>
-            <Route path="/" element={<TuitList />} />
-            <Route path="home" element={<TuitList />} />
+            <Route path="/" element={<HomeComponent />} />
+            <Route path="home" element={<HomeComponent />} />
             <Route path="explore" element={<ExploreComponent />} />
           </Routes>
         </div>
