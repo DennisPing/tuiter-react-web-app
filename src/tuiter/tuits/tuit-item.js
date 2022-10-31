@@ -75,7 +75,7 @@ const TuitItem = ({ tuit }) => {
   return (
     <a href={tuit.link} className="list-group-item list-group-item-action py-3">
       <div className="row">
-        <div className="col-auto">
+        <div className="col-auto pe-3">
           {socialIcon}
           <img src={tuit.avatarIcon} className="wd-icon-width rounded-circle" />
         </div>

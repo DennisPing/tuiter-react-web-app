@@ -10,10 +10,10 @@ const WhatsHappening = () => {
   };
 
   return (
-    <div className="list-group-item py-2">
-      <div className="fs-5 fw-bold my-2">Home</div>
+    <div className="list-group-item">
+      <div className="fs-5 fw-bold mb-3">Home</div>
       <div className="row">
-        <div className="col-auto">
+        <div className="col-auto pe-3">
           <img
             src="https://mushucdn.b-cdn.net/Dennis_Headshot_Portrait.jpg"
             className="wd-icon-width rounded-circle"
@@ -26,7 +26,7 @@ const WhatsHappening = () => {
             className="wd-disable-resize form-control form-control-lg shadow-none border-0 rounded-0 px-0 py-2"
             onChange={(e) => setWhatsHappening(e.target.value)}
           />
-          <div className="d-flex flex-row text-primary fs-5 py-2 align-items-center">
+          <div className="d-flex flex-row text-primary fs-5 pt-2 align-items-center">
             <i className="bi bi-card-image me-4" />
             <i className="bi bi-filetype-gif me-4" />
             <i className="bi bi-bar-chart-line me-4" />
