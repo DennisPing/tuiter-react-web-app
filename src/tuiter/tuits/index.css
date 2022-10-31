@@ -11,3 +11,14 @@
   border-bottom-left-radius: 1rem !important;
   border-bottom-right-radius: 1rem !important;
 }
+
+.wd-more {
+  height: 24px;
+  width: 24px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.wd-more:hover {
+  background-color: gainsboro;
+}

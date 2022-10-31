@@ -1,12 +1,19 @@
 import { useState } from "react";
+import { createTuit } from "../reducers/tuit-reducer";
+import { useDispatch } from "react-redux";
+
 import "./index.css";
 
 import TextareaAutosize from "react-textarea-autosize";
 
 const WhatsHappening = () => {
   let [whatsHappening, setWhatsHappening] = useState("");
+  const dispatch = useDispatch();
   const tuitClickHandler = () => {
-    console.log(whatsHappening);
+    const newTuit = {
+      text: whatsHappening,
+    };
+    dispatch(createTuit(newTuit));
   };
 
   return (

@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import "./index.css";
 
 const WhoToFollowListItem = ({ who }) => {
@@ -13,7 +12,7 @@ const WhoToFollowListItem = ({ who }) => {
         <div className="col px-0 text-nowrap">
           <div>
             <strong>{who.userName}&nbsp;</strong>
-            <FontAwesomeIcon icon={faCircleCheck} className="text-primary" />
+            <FontAwesomeIcon icon={["fas", "circle-check"]} className="text-primary" />
           </div>
           <div className="text-secondary">@{who.handle}</div>
         </div>
