@@ -1,0 +1,7 @@
+.wd-prebold::before {
+  content: attr(data-value);
+  visibility: hidden;
+  display: block;
+  height: 0;
+  font-weight: bold;
+}
