@@ -1,9 +1,16 @@
 import PropTypes from "prop-types";
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import Button from "react-bootstrap/Button";
 
+import EditProfileComponent from "../edit-profile";
 import "./index.css";
 
 const ProfileBio = ({ profile }) => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <>
       <div className="list-group-item d-flex">
@@ -30,9 +37,11 @@ const ProfileBio = ({ profile }) => {
         <button
           type="button"
           className="btn border fw-bold rounded-pill wd-profile-edit position-absolute top-0 end-0 me-3 mt-3"
+          onClick={handleShow}
         >
           Edit Profile
         </button>
+        <EditProfileComponent show={show} handleClose={handleClose} />
         <h5 className="fw-bold m-0">
           {profile.firstName} {profile.lastName}
         </h5>
