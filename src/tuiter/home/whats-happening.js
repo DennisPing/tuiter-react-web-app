@@ -18,7 +18,7 @@ const WhatsHappening = () => {
 
   return (
     <div className="list-group-item">
-      <div className="fs-5 fw-bold mb-3">Home</div>
+      <h5 className="mb-3">Home</h5>
       <div className="row">
         <div className="col-auto pe-3">
           <img

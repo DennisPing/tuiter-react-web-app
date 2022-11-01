@@ -9,6 +9,7 @@ import {
   faCircleCheck,
   faMagnifyingGlass,
   faGear,
+  faArrowLeft,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -19,5 +20,6 @@ library.add(
   faArrowUpFromBracket,
   faCircleCheck,
   faMagnifyingGlass,
-  faGear
+  faGear,
+  faArrowLeft
 );

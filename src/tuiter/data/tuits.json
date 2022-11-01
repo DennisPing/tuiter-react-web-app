@@ -93,5 +93,31 @@
             "username": "Steve Harrington"
         },
         "verified": true
+    },
+    {
+        "_id": 6,
+        "avatarIcon": "https://mushucdn.b-cdn.net/Dennis_Headshot_Portrait.jpg",
+        "username": "Dennis Ping",
+        "handle": "DennisPing",
+        "time": "12h",
+        "text": "Test Tuit 1 green eggs and ham.",
+        "comments": 15,
+        "retweets": 24,
+        "likes": 65,
+        "liked": true,
+        "verified": false
+    },
+    {
+        "_id": 7,
+        "avatarIcon": "https://mushucdn.b-cdn.net/Dennis_Headshot_Portrait.jpg",
+        "username": "Dennis Ping",
+        "handle": "DennisPing",
+        "time": "23h",
+        "text": "Test Tuit 2 the cat in the hat swam across the river.",
+        "comments": 5,
+        "retweets": 19,
+        "likes": 45,
+        "liked": true,
+        "verified": false
     }
 ]

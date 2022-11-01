@@ -1,0 +1,27 @@
+.wd-profile-back {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.wd-profile-back:hover {
+  cursor: pointer;
+  background-color: var(--bs-gray-200);
+}
+
+.wd-profile-banner {
+  width: 100%;
+  max-height: 15rem;
+  object-fit: cover;
+}
+
+.wd-profile-pic {
+  width: 9rem;
+  height: 9rem;
+  bottom: -5rem;
+  left: 1rem;
+  z-index: 1;
+}
+
+.wd-profile-gap {
+  padding-top: 6rem !important;
+}
