@@ -14,7 +14,8 @@
             "mediaDomain": "crunchyroll.com"
         },
         "comments": 850,
-        "retweets": 3500,
+        "retuits": 3500,
+        "retuited": true,
         "likes": 37500,
         "liked": true,
         "verified": true
@@ -29,7 +30,8 @@
         "link": "https://www.nba.com/news/5-takeaways-pelicans-nets",
         "image": "https://mushucdn.b-cdn.net/zion-opening-night.jpg",
         "comments": 1200,
-        "retweets": 2500,
+        "retuits": 2500,
+        "retuited": false,
         "likes": 5850,
         "liked": true,
         "socialAction": {
@@ -46,7 +48,8 @@
         "time": "12h",
         "text": "There is an idea of a Patrick Bateman. Some kind of abstraction. But there is no real me. Only an entity. Something illusory. And though I can hide my cold gaze, and you can shake my hand and feel flesh gripping yours, and maybe you can even sense our lifestyles are probably comparable, I simply am not there.",
         "comments": 342,
-        "retweets": 135,
+        "retuits": 135,
+        "retuited": false,
         "likes": 4364,
         "liked": false,
         "verified": false
@@ -61,7 +64,8 @@
         "link": "https://www.espn.com/blog/philadelphia-eagles/post/_/id/33214/philly-is-lit-undefeated-eagles-showing-all-the-signs-of-a-super-bowl-contender",
         "image": "https://mushucdn.b-cdn.net/eagles-jalen-hurts.webp",
         "comments": 970,
-        "retweets": 6400,
+        "retuits": 6400,
+        "retuited": false,
         "likes": 25000,
         "liked": true,
         "socialAction": {
@@ -85,7 +89,8 @@
             "mediaDomain": "nytimes.com"
         },
         "comments": 95,
-        "retweets": 147,
+        "retuits": 147,
+        "retuited": false,
         "likes": 8234,
         "liked": false,
         "socialAction": {
@@ -102,7 +107,8 @@
         "time": "12h",
         "text": "Test Tuit 1 green eggs and ham.",
         "comments": 15,
-        "retweets": 24,
+        "retuits": 24,
+        "retuited": false,
         "likes": 65,
         "liked": true,
         "verified": false
@@ -115,7 +121,8 @@
         "time": "23h",
         "text": "Test Tuit 2 the cat in the hat swam across the river.",
         "comments": 5,
-        "retweets": 19,
+        "retuits": 19,
+        "retuited": false,
         "likes": 45,
         "liked": true,
         "verified": false

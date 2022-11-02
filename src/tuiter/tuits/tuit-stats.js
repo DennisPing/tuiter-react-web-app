@@ -1,5 +1,8 @@
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useDispatch } from "react-redux";
+
+import { toggleLikeTuit, toggleRetuit } from "../reducers/tuit-reducer";
 
 // Code borrowed from: https://stackoverflow.com/questions/9461621/format-a-number-as-2-5k-if-a-thousand-or-more-otherwise-900
 const kFormatter = (num) => {
@@ -8,38 +11,58 @@ const kFormatter = (num) => {
     : Math.sign(num) * Math.abs(num);
 };
 
-const TuitStat = ({ comments, retweets, likes, liked }) => {
+const TuitStat = ({ id, comments, retuits, retuited, likes, liked }) => {
+  const dispatch = useDispatch();
+  const toggleLikeTuitHandler = (id) => {
+    dispatch(toggleLikeTuit(id));
+  };
+
+  const toggleRetuitHandler = (id) => {
+    dispatch(toggleRetuit(id));
+  };
+
   return (
-    <div className="d-flex text-secondary">
-      <div className="flex-fill">
-        <div className="wd-hover-icon">
-          {/* <i className="bi bi-chat rounded-circle wd-icon-sq p-1" /> */}
+    <div className="row row-cols-4 text-secondary m-auto">
+      <div className="col p-0">
+        <span className="wd-hover-icon p-1">
           <FontAwesomeIcon icon={["far", "comment"]} className="rounded-circle p-1 wd-icon-sq" />
           <span className="ms-2">{kFormatter(comments)}</span>
-        </div>
-      </div>
-      <div className="flex-fill">
-        <span className="wd-hover-icon">
-          {/* <i className="bi bi-repeat rounded-circle wd-icon-sq" /> */}
-          <FontAwesomeIcon icon={["fas", "retweet"]} className="rounded-circle p-1 wd-icon-sq" />
-          <span className="ms-2">{kFormatter(retweets)}</span>
         </span>
       </div>
-      <div className="flex-fill">
-        <span className="wd-hover-icon">
-          {/* <i className={liked ? "bi bi-heart-fill text-danger" : "bi bi-heart"} /> */}
+      <div className="col p-0">
+        <span
+          className="wd-hover-icon p-1"
+          onClick={(e) => {
+            e.stopPropagation();
+            e.preventDefault();
+            toggleRetuitHandler(id);
+          }}
+        >
+          <FontAwesomeIcon
+            icon={["fas", "retweet"]}
+            className={`rounded-circle p-1 wd-icon-sq ${retuited ? "text-success" : ""}`}
+          />
+          <span className={`ms-2 ${retuited ? "text-success" : ""}`}>{kFormatter(retuits)}</span>
+        </span>
+      </div>
+      <div className="col p-0">
+        <span
+          className="wd-hover-icon p-1"
+          onClick={(e) => {
+            e.stopPropagation();
+            e.preventDefault();
+            toggleLikeTuitHandler(id);
+          }}
+        >
           <FontAwesomeIcon
             icon={liked ? ["fas", "heart"] : ["far", "heart"]}
-            className={
-              liked ? "text-danger rounded-circle p-1 wd-icon-sq" : "rounded-circle p-1 wd-icon-sq"
-            }
+            className={`rounded-circle p-1 wd-icon-sq ${liked ? "text-danger" : ""}`}
           />
           <span className={`ms-2 ${liked ? "text-danger" : ""}`}>{kFormatter(likes)}</span>
         </span>
       </div>
-      <div className="flex-fill">
-        <span className="wd-hover-icon">
-          {/* <i className="bi bi-upload rounded-circle p-1" /> */}
+      <div className="col p-0">
+        <span className="wd-hover-icon p-1">
           <FontAwesomeIcon
             icon={["fas", "arrow-up-from-bracket"]}
             className="rounded-circle p-1 wd-icon-sq"
@@ -51,9 +74,11 @@ const TuitStat = ({ comments, retweets, likes, liked }) => {
 };
 
 TuitStat.propTypes = {
-  comments: PropTypes.number.isRequired,
-  retweets: PropTypes.number.isRequired,
-  likes: PropTypes.number.isRequired,
+  id: PropTypes.number,
+  comments: PropTypes.number,
+  retuits: PropTypes.number,
+  retuited: PropTypes.bool,
+  likes: PropTypes.number,
   liked: PropTypes.bool,
 };
 

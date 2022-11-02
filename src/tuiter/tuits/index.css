@@ -12,13 +12,27 @@
   border-bottom-right-radius: 1rem !important;
 }
 
-.wd-more {
+.wd-close {
   height: 24px;
   width: 24px;
   text-align: center;
 }
 
-.wd-more:hover {
+.wd-close:hover {
   cursor: pointer;
-  background-color: var(--bs-gray-200);
+  background-color: gainsboro;
+}
+
+.wd-hover-icon:hover {
+  cursor: pointer;
+}
+
+.wd-hover-icon:hover > .rounded-circle {
+  background-color: gainsboro;
+}
+
+.wd-icon-sq {
+  width: 16px;
+  height: 16px;
+  vertical-align: bottom;
 }

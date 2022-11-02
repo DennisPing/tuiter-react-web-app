@@ -9,17 +9,3 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
-
-.wd-hover-icon:hover {
-  cursor: pointer;
-}
-
-.wd-hover-icon:hover > .rounded-circle {
-  background-color: gainsboro;
-}
-
-.wd-icon-sq {
-  width: 16px;
-  height: 16px;
-  vertical-align: bottom;
-}

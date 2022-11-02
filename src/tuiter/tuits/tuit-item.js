@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useDispatch } from "react-redux";
-import { deleteTuit } from "../reducers/tuit-reducer";
 
+import { deleteTuit } from "../reducers/tuit-reducer";
 import TuitStat from "./tuit-stats";
 import "./index.css";
 
@@ -32,43 +32,24 @@ const MediaContent = ({ tuit }) => {
   }
 };
 
-const SocialIcon = ({ socialAction }) => {
-  if (socialAction) {
-    let icon = "";
-    switch (socialAction.action) {
-      case "retweeted":
-        icon = "bi bi-repeat";
-        break;
-      case "liked":
-        icon = "bi bi-heart-fill";
-        break;
-      case "follows":
-        icon = "bi bi-person-fill";
-        break;
-    }
-    return (
-      <div>
-        <i className={`${icon} small text-secondary float-end`} />
-      </div>
-    );
+const SocialIcon = ({ action }) => {
+  let icon = "";
+  switch (action) {
+    case "retweeted":
+      icon = "bi bi-repeat";
+      break;
+    case "liked":
+      icon = "bi bi-heart-fill";
+      break;
+    case "follows":
+      icon = "bi bi-person-fill";
+      break;
   }
-  return <></>;
-};
-
-const SocialName = ({ socialAction }) => {
-  if (socialAction) {
-    return (
-      <div className="small text-secondary fw-bold">{`${socialAction.username} ${socialAction.action}`}</div>
-    );
-  }
-  return <></>;
-};
-
-const Verified = ({ verified }) => {
-  if (verified) {
-    return <FontAwesomeIcon icon={["fas", "circle-check"]} className="text-primary me-1" />;
-  }
-  return <></>;
+  return (
+    <div>
+      <i className={`${icon} small text-secondary float-end`} />
+    </div>
+  );
 };
 
 const TuitItem = ({ tuit }) => {
@@ -81,18 +62,27 @@ const TuitItem = ({ tuit }) => {
     <a href={tuit.link} className="list-group-item list-group-item-action py-3">
       <div className="row">
         <div className="col-auto pe-3">
-          <SocialIcon socialAction={tuit.socialAction} />
+          {/* Conditional render social icon */}
+          {tuit.socialAction && <SocialIcon action={tuit.socialAction.action} />}
           <img src={tuit.avatarIcon} className="wd-icon-width rounded-circle" />
         </div>
         <div className="col ps-0">
-          <SocialName socialAction={tuit.socialAction} />
+          {/* Conditional render social header */}
+          {tuit.socialAction && (
+            <div className="small text-secondary fw-bold">
+              {`${tuit.socialAction.username} ${tuit.socialAction.action}`}
+            </div>
+          )}
           <div className="align-items-center">
             <span className="fw-bold me-1">{tuit.username}</span>
-            <Verified verified={tuit.verified} />
+            {/* Conditional render verified badge */}
+            {tuit.verified && (
+              <FontAwesomeIcon icon={["fas", "circle-check"]} className="text-primary me-1" />
+            )}
             <span className="text-secondary me-1">@{tuit.handle}</span>
             <span className="text-secondary"> - {tuit.time}</span>
             <i
-              className="bi bi-x-lg text-secondary rounded-circle float-end wd-more"
+              className="bi bi-x-lg text-secondary rounded-circle float-end wd-close"
               onClick={(e) => {
                 e.stopPropagation();
                 e.preventDefault();
@@ -103,8 +93,10 @@ const TuitItem = ({ tuit }) => {
           <div className="mb-2">{tuit.text}</div>
           <MediaContent tuit={tuit} />
           <TuitStat
+            id={tuit._id}
             comments={tuit.comments}
-            retweets={tuit.retweets}
+            retuits={tuit.retuits}
+            retuited={tuit.retuited}
             likes={tuit.likes}
             liked={tuit.liked}
           />
@@ -116,6 +108,7 @@ const TuitItem = ({ tuit }) => {
 
 TuitItem.propTypes = {
   tuit: PropTypes.shape({
+    _id: PropTypes.number.isRequired,
     avatarIcon: PropTypes.string.isRequired,
     username: PropTypes.string.isRequired,
     handle: PropTypes.string.isRequired,
@@ -129,7 +122,8 @@ TuitItem.propTypes = {
       mediaDomain: PropTypes.string.isRequired,
     }),
     comments: PropTypes.number.isRequired,
-    retweets: PropTypes.number.isRequired,
+    retuits: PropTypes.number.isRequired,
+    retuited: PropTypes.bool,
     likes: PropTypes.number.isRequired,
     liked: PropTypes.bool,
     socialAction: PropTypes.shape({
@@ -141,17 +135,9 @@ TuitItem.propTypes = {
 };
 
 SocialIcon.propTypes = {
-  socialAction: PropTypes.shape({
-    action: PropTypes.string.isRequired,
-    username: PropTypes.string.isRequired,
-  }),
+  action: PropTypes.string.isRequired,
 };
 
-Verified.propTypes = {
-  verified: PropTypes.bool,
-};
-
-SocialName.propTypes = SocialIcon.propTypes;
 MediaContent.propTypes = TuitItem.propTypes;
 
 export default TuitItem;

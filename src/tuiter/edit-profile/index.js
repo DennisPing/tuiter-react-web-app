@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import { useLocation } from "react-router";
-import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useDispatch } from "react-redux";
+import { updateProfile } from "../reducers/profile-reducer";
 import TextareaAutosize from "react-textarea-autosize";
 
 const EditProfileComponent = () => {
@@ -11,13 +11,9 @@ const EditProfileComponent = () => {
   // Then, modify the currProfile object
   const [currProfile, setProfile] = useState(profile);
 
-  // Exit button handler
-  const navigate = useNavigate();
-  const { pathname } = useLocation();
-  const exitHandler = () => {
-    const paths = pathname.split("/");
-    const prev = paths.slice(0, paths.length - 1).join("/");
-    navigate(prev);
+  const dispatch = useDispatch();
+  const updateProfileHandler = (profile) => {
+    dispatch(updateProfile(profile));
   };
 
   return (
@@ -26,10 +22,17 @@ const EditProfileComponent = () => {
         <FontAwesomeIcon
           icon={["fas", "xmark"]}
           className="me-3 align-self-center rounded-circle p-2 wd-profile-back"
-          onClick={() => exitHandler()}
+          onClick={() => history.back()}
         />
         <h5 className="my-0">Edit Profile</h5>
-        <button type="button" className="btn btn-dark rounded-pill ms-auto fw-bold">
+        <button
+          type="button"
+          className="btn btn-dark rounded-pill ms-auto fw-bold"
+          onClick={() => {
+            updateProfileHandler(currProfile);
+            history.back();
+          }}
+        >
           Save
         </button>
       </div>

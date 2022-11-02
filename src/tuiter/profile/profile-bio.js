@@ -11,7 +11,7 @@ const ProfileBio = ({ profile }) => {
         <FontAwesomeIcon
           icon={["fas", "arrow-left"]}
           className="me-3 align-self-center rounded-circle p-2 wd-profile-back"
-          onClick={() => history.go(-1)}
+          onClick={() => history.back()}
         />
         <div className="d-flex flex-column">
           <h5 className="m-0">{profile.username}</h5>
