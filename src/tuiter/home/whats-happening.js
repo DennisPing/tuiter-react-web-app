@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { createTuit } from "../reducers/tuit-reducer";
 import { useDispatch } from "react-redux";
+import TextareaAutosize from "react-textarea-autosize";
 
 import "./index.css";
-
-import TextareaAutosize from "react-textarea-autosize";
 
 const WhatsHappening = () => {
   let [whatsHappening, setWhatsHappening] = useState("");

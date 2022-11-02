@@ -25,3 +25,7 @@
 .wd-profile-gap {
   padding-top: 6rem !important;
 }
+
+.wd-profile-header {
+  height: 63px;
+}

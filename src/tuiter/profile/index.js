@@ -13,4 +13,5 @@ const ProfileComponent = () => {
     </div>
   );
 };
+
 export default ProfileComponent;

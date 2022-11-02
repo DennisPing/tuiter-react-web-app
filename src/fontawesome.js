@@ -10,6 +10,8 @@ import {
   faMagnifyingGlass,
   faGear,
   faArrowLeft,
+  faXmark,
+  faLink,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -21,5 +23,7 @@ library.add(
   faCircleCheck,
   faMagnifyingGlass,
   faGear,
-  faArrowLeft
+  faArrowLeft,
+  faXmark,
+  faLink
 );

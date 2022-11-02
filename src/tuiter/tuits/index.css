@@ -16,9 +16,9 @@
   height: 24px;
   width: 24px;
   text-align: center;
-  cursor: pointer;
 }
 
 .wd-more:hover {
-  background-color: gainsboro;
+  cursor: pointer;
+  background-color: var(--bs-gray-200);
 }
