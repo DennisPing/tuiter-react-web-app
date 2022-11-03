@@ -18,16 +18,17 @@ const MediaContent = ({ tuit }) => {
   // Image with media card
   else {
     return (
-      <div className="card mb-2 border-0 rounded-4">
+      <a
+        href={tuit.mediaCard.mediaLink}
+        className="card mb-2 border-0 rounded-4 text-decoration-none"
+      >
         <img src={tuit.image} className="card-img-top border wd-top-rounded-corners" />
         <div className="card-body pt-2 border-start border-end border-bottom wd-bottom-rounded-corners">
-          <div className="card-link text-secondary text-decoration-none">
-            {tuit.mediaCard.imageDomain}
-          </div>
-          <h5 className="card-title mb-1">{tuit.mediaCard.mediaTitle}</h5>
+          <div className="card-link text-secondary">{tuit.mediaCard.mediaDomain}</div>
+          <h5 className="card-title mb-1 text-dark">{tuit.mediaCard.mediaTitle}</h5>
           <p className="card-text text-secondary">{tuit.mediaCard.mediaText}</p>
         </div>
-      </div>
+      </a>
     );
   }
 };
@@ -36,18 +37,18 @@ const SocialIcon = ({ action }) => {
   let icon = "";
   switch (action) {
     case "retweeted":
-      icon = "bi bi-repeat";
+      icon = ["fas", "retweet"];
       break;
     case "liked":
-      icon = "bi bi-heart-fill";
+      icon = ["fas", "heart"];
       break;
     case "follows":
-      icon = "bi bi-person-fill";
+      icon = ["fas", "user"];
       break;
   }
   return (
     <div>
-      <i className={`${icon} small text-secondary float-end`} />
+      <FontAwesomeIcon icon={icon} className="fa-xs text-secondary float-end" />
     </div>
   );
 };
@@ -59,7 +60,7 @@ const TuitItem = ({ tuit }) => {
   };
 
   return (
-    <a href={tuit.link} className="list-group-item list-group-item-action py-3">
+    <div className="list-group-item list-group-item-action py-3">
       <div className="row">
         <div className="col-auto pe-3">
           {/* Conditional render social icon */}
@@ -102,7 +103,7 @@ const TuitItem = ({ tuit }) => {
           />
         </div>
       </div>
-    </a>
+    </div>
   );
 };
 
@@ -114,17 +115,18 @@ TuitItem.propTypes = {
     handle: PropTypes.string.isRequired,
     time: PropTypes.string.isRequired,
     text: PropTypes.string,
-    link: PropTypes.string,
     image: PropTypes.string,
     mediaCard: PropTypes.shape({
       mediaTitle: PropTypes.string.isRequired,
       mediaText: PropTypes.string.isRequired,
       mediaDomain: PropTypes.string.isRequired,
+      mediaLink: PropTypes.string.isRequired,
     }),
-    comments: PropTypes.number.isRequired,
-    retuits: PropTypes.number.isRequired,
+    topic: PropTypes.string,
+    comments: PropTypes.number,
+    retuits: PropTypes.number,
     retuited: PropTypes.bool,
-    likes: PropTypes.number.isRequired,
+    likes: PropTypes.number,
     liked: PropTypes.bool,
     socialAction: PropTypes.shape({
       action: PropTypes.string.isRequired,

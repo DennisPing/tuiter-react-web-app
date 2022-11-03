@@ -1,35 +1,30 @@
-import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const PostSummaryItem = ({ post }) => {
+import TuitItem from "../tuits/tuit-item";
+
+const PostSummaryItem = ({ tuit }) => {
   return (
     <a href="#" className="list-group-item list-group-item-action">
       <div className="row">
-        <div className="col-9 col-md-10 px-2">
-          <div className="text-secondary">{post.topic}</div>
+        <div className="col-9 col-md-10">
+          <div className="text-secondary">{tuit.topic}</div>
           <div>
-            <strong>{post.userName}&nbsp;</strong>
-            <FontAwesomeIcon icon={["fas", "circle-check"]} className="text-primary" />
-            <span className="text-secondary"> - {post.time}</span>
+            <strong>{tuit.username}&nbsp;</strong>
+            {tuit.verified && (
+              <FontAwesomeIcon icon={["fas", "circle-check"]} className="text-primary" />
+            )}
+            <span className="text-secondary"> - {tuit.time}</span>
           </div>
-          <div className="">{post.title}</div>
+          <div className="">{tuit.text}</div>
         </div>
         <div className="col-3 col-md-2 py-2 align-self-center">
-          <img src={post.image} className="img-fluid rounded-3 float-end" />
+          <img src={tuit.avatarIcon} className="img-fluid rounded-3 float-end" />
         </div>
       </div>
     </a>
   );
 };
 
-PostSummaryItem.propTypes = {
-  post: PropTypes.shape({
-    topic: PropTypes.string,
-    userName: PropTypes.string,
-    time: PropTypes.string,
-    title: PropTypes.string,
-    image: PropTypes.string,
-  }),
-};
+PostSummaryItem.propTypes = TuitItem.propTypes;
 
 export default PostSummaryItem;

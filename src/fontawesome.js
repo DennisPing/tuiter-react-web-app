@@ -12,6 +12,7 @@ import {
   faArrowLeft,
   faXmark,
   faLink,
+  faUser,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -25,5 +26,6 @@ library.add(
   faGear,
   faArrowLeft,
   faXmark,
-  faLink
+  faLink,
+  faUser
 );

@@ -2,8 +2,9 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useDispatch } from "react-redux";
-import { updateProfile } from "../reducers/profile-reducer";
 import TextareaAutosize from "react-textarea-autosize";
+
+import { updateProfile } from "../reducers/profile-reducer";
 
 const EditProfileComponent = () => {
   // First, hold the profile data from the state
@@ -91,6 +92,21 @@ const EditProfileComponent = () => {
             onChange={(e) => setProfile({ ...currProfile, website: e.target.value })}
           />
           <label htmlFor="editLocationInput">Website</label>
+        </div>
+        <div className="form-floating my-3">
+          <input
+            type="date"
+            id="editBirthdayInput"
+            value={new Date(currProfile.dob).toISOString().split("T")[0]}
+            onChange={(e) =>
+              setProfile({
+                ...currProfile,
+                dob: new Date(e.target.value).toISOString(),
+              })
+            }
+            className="form-control"
+          />
+          <label htmlFor="editBirthdayInput">Birthdate</label>
         </div>
       </div>
     </div>

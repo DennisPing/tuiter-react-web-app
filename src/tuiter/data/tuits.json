@@ -6,16 +6,17 @@
         "handle": "Crunchyroll",
         "time": "16h",
         "text": "New amazing shows coming this Fall 2022",
-        "link": "https://www.crunchyroll.com/anime-news/2022/09/21/crunchyroll-announces-fall-2022-anime-lineup",
         "image": "https://mushucdn.b-cdn.net/crunchyroll-thumbnail.png",
         "mediaCard": {
             "mediaTitle": "Crunchyroll Fall 2022 Lineup",
             "mediaText": "Charge up with some of the most anticipated anime adaptations to date with Chainsaw Man and BLUELOCK! Familiar favorites will also electrify as SPY x FAMILY, My Hero Academia Season 6 and Mob Psycho 100 III make their return with new episodes!",
-            "mediaDomain": "crunchyroll.com"
+            "mediaDomain": "crunchyroll.com", 
+            "mediaLink":"https://www.crunchyroll.com/anime-news/2022/09/21/crunchyroll-announces-fall-2022-anime-lineup"
         },
+        "topic": "Anime",
         "comments": 850,
         "retuits": 3500,
-        "retuited": true,
+        "retuited": false,
         "likes": 37500,
         "liked": true,
         "verified": true
@@ -26,9 +27,9 @@
         "username": "NBA",
         "handle": "NBA",
         "time": "12h",
-        "text": "5 Takeaways from Pelicans' Season-Opening Victory in Brooklyn",
-        "link": "https://www.nba.com/news/5-takeaways-pelicans-nets",
+        "text": "Zion Williamson leads ambitious Pelicans in season-opening victory over Brooklyn Nets",
         "image": "https://mushucdn.b-cdn.net/zion-opening-night.jpg",
+        "topic": "Sports",
         "comments": 1200,
         "retuits": 2500,
         "retuited": false,
@@ -61,8 +62,8 @@
         "handle": "espn",
         "time": "2d",
         "text": "After a 26-17 victory over the Vikings, undefeated Eagles showing all the signs of a Super Bowl contender",
-        "link": "https://www.espn.com/blog/philadelphia-eagles/post/_/id/33214/philly-is-lit-undefeated-eagles-showing-all-the-signs-of-a-super-bowl-contender",
         "image": "https://mushucdn.b-cdn.net/eagles-jalen-hurts.webp",
+        "topic": "Sports",
         "comments": 970,
         "retuits": 6400,
         "retuited": false,
@@ -81,12 +82,13 @@
         "handle": "Starbucks",
         "time": "1d",
         "text": "Starbucks Shares Shift in Strategy, to Automation and Expansion for Coffee Global Domination!",
-        "link": "https://www.nytimes.com/2022/09/13/business/starbucks-reinvention-strategy-employees.html",
+        "topic": "Business",
         "image": "https://static01.nyt.com/images/2022/09/13/business/13starbucks-01/merlin_213065712_9ccf5b24-a250-4ed3-99e5-9bda0a531100-superJumbo.jpg?quality=75&auto=webp",
         "mediaCard": {
             "mediaTitle": "Starbucks Shares Shift in Strategy, to Automation and Expansion",
             "mediaText": "The coffee giant intends to speed up drink-making and open thousands of additional locations in China over the next three years.",
-            "mediaDomain": "nytimes.com"
+            "mediaDomain": "nytimes.com",
+            "mediaLink": "https://www.nytimes.com/2022/09/13/business/starbucks-reinvention-strategy-employees.html"
         },
         "comments": 95,
         "retuits": 147,
@@ -126,5 +128,21 @@
         "likes": 45,
         "liked": true,
         "verified": false
+    },
+    {
+        "_id": 8,
+        "avatarIcon": "https://mushucdn.b-cdn.net/coinbase-logo.webp",
+        "username": "Coinbase",
+        "handle": "Coinbase",
+        "time": "25d",
+        "text": "Crypto exchange Coinbase waives fees for converting between USDC and fiat, eyeing global audience.",
+        "image": "https://www.coindesk.com/resizer/WaSbnARcROQHkNm64Lw6Vjfg9lk=/1056x704/filters:quality(80):format(webp)/cloudfront-us-east-1.images.arcpublishing.com/coindesk/2JTNQEEQXJDGDHUO6RFFR5EUAM.jpg",
+        "topic": "Cryptocurrency",
+        "comments": 760,
+        "retuits": 2101,
+        "retuited": true,
+        "likes": 42000,
+        "liked": true,
+        "verified": true
     }
 ]

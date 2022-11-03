@@ -59,6 +59,7 @@ const ProfileBio = ({ profile }) => {
             <div className="me-3">
               <i className="bi bi-balloon pe-2"></i>
               {new Date(profile.dob).toLocaleDateString("en-us", {
+                timeZone: "UTC",
                 year: "numeric",
                 month: "short",
                 day: "numeric",
@@ -70,6 +71,7 @@ const ProfileBio = ({ profile }) => {
               <i className="bi bi-calendar3 pe-2"></i>
               {"Joined "}
               {new Date(profile.joined).toLocaleDateString("en-us", {
+                timeZone: "UTC",
                 year: "numeric",
                 month: "short",
                 day: "numeric",

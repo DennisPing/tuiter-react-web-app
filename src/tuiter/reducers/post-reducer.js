@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
-import postsArray from "../data/posts.json";
+import tuitArray from "../data/tuits.json";
 
 const postSlice = createSlice({
   name: "post",
-  initialState: postsArray,
+  initialState: tuitArray,
 });
 
 export default postSlice.reducer;

@@ -6,7 +6,9 @@ const ProfileTuits = ({ handle, tuits }) => {
   return (
     <>
       {tuits
-        .filter((tuit) => tuit.handle === handle)
+        .filter((tuit) => {
+          return tuit.handle === handle || tuit.retuited === true;
+        })
         .map((tuit) => (
           <TuitItem key={tuit._id} tuit={tuit} />
         ))}
