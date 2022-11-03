@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router";
+import { Routes, Route, Navigate } from "react-router";
 import { Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
 
@@ -31,7 +31,7 @@ function Tuiter() {
         </div>
         <div className="col col-xl-6">
           <Routes>
-            <Route path="/" element={<HomeComponent />} />
+            <Route path="/" element={<Navigate replace to="home" />} />
             <Route path="home" element={<HomeComponent />} />
             <Route path="explore" element={<ExploreComponent />} />
             <Route path="profile" element={<ProfileComponent />} />
