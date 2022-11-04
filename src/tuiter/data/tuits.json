@@ -37,7 +37,7 @@
         "liked": true,
         "socialAction": {
             "action": "retweeted",
-            "username": "Dennis Ping"
+            "username": "Dua Lipa"
         },
         "verified": true
     },
@@ -107,7 +107,7 @@
         "username": "Dennis Ping",
         "handle": "DennisPing",
         "time": "12h",
-        "text": "Test Tuit 1 green eggs and ham.",
+        "text": "Open your eyes, Look up to the skies and see, I'm just a poor boy, I need no sympathy, Because I'm easy come, easy go, Little high, little low, Any way the wind blows doesn't really matter to me, to me.",
         "comments": 15,
         "retuits": 24,
         "retuited": false,
@@ -121,7 +121,7 @@
         "username": "Dennis Ping",
         "handle": "DennisPing",
         "time": "23h",
-        "text": "Test Tuit 2 the cat in the hat swam across the river.",
+        "text": "Green eggs and ham. I do not like them, Sam-I-am. I do not like green eggs and ham.",
         "comments": 5,
         "retuits": 19,
         "retuited": false,

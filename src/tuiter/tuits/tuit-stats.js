@@ -22,16 +22,19 @@ const TuitStat = ({ id, comments, retuits, retuited, likes, liked }) => {
   };
 
   return (
-    <div className="row row-cols-4 text-secondary m-auto">
-      <div className="col p-0">
-        <span className="wd-hover-icon p-1">
-          <FontAwesomeIcon icon={["far", "comment"]} className="rounded-circle p-1 wd-icon-sq" />
-          <span className="ms-2">{kFormatter(comments)}</span>
+    <div className="row row-cols-4 text-secondary mb-2">
+      <div className="col ps-2 pe-0">
+        <span className="wd-hover-icon d-inline-block">
+          <FontAwesomeIcon
+            icon={["far", "comment"]}
+            className="rounded-circle align-middle p-2 wd-icon-sq"
+          />
+          <span className="mx-1 align-middle">{kFormatter(comments)}</span>
         </span>
       </div>
       <div className="col p-0">
         <span
-          className="wd-hover-icon p-1"
+          className="wd-hover-icon d-inline-block"
           onClick={(e) => {
             e.stopPropagation();
             e.preventDefault();
@@ -40,14 +43,18 @@ const TuitStat = ({ id, comments, retuits, retuited, likes, liked }) => {
         >
           <FontAwesomeIcon
             icon={["fas", "retweet"]}
-            className={`rounded-circle p-1 wd-icon-sq ${retuited ? "text-success" : ""}`}
+            className={`rounded-circle align-middle p-2 wd-icon-sq ${
+              retuited ? "text-success" : ""
+            }`}
           />
-          <span className={`ms-2 ${retuited ? "text-success" : ""}`}>{kFormatter(retuits)}</span>
+          <span className={`mx-1 align-middle ${retuited ? "text-success" : ""}`}>
+            {kFormatter(retuits)}
+          </span>
         </span>
       </div>
       <div className="col p-0">
         <span
-          className="wd-hover-icon p-1"
+          className="wd-hover-icon d-inline-block"
           onClick={(e) => {
             e.stopPropagation();
             e.preventDefault();
@@ -56,16 +63,18 @@ const TuitStat = ({ id, comments, retuits, retuited, likes, liked }) => {
         >
           <FontAwesomeIcon
             icon={liked ? ["fas", "heart"] : ["far", "heart"]}
-            className={`rounded-circle p-1 wd-icon-sq ${liked ? "text-danger" : ""}`}
+            className={`rounded-circle align-middle p-2 wd-icon-sq ${liked ? "text-danger" : ""}`}
           />
-          <span className={`ms-2 ${liked ? "text-danger" : ""}`}>{kFormatter(likes)}</span>
+          <span className={`mx-1 align-middle ${liked ? "text-danger" : ""}`}>
+            {kFormatter(likes)}
+          </span>
         </span>
       </div>
       <div className="col p-0">
-        <span className="wd-hover-icon p-1">
+        <span className="wd-hover-icon d-inline-block">
           <FontAwesomeIcon
             icon={["fas", "arrow-up-from-bracket"]}
-            className="rounded-circle p-1 wd-icon-sq"
+            className="rounded-circle align-middle p-2 wd-icon-sq"
           />
         </span>
       </div>

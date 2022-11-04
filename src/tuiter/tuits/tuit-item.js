@@ -60,7 +60,15 @@ const TuitItem = ({ tuit }) => {
   };
 
   return (
-    <div className="list-group-item list-group-item-action py-3">
+    <div className="list-group-item list-group-item-action pt-3 pb-0 position-relative">
+      <i
+        className="bi bi-x-lg text-secondary rounded-circle position-absolute top-0 end-0 me-3 mt-3 wd-close"
+        onClick={(e) => {
+          e.stopPropagation();
+          e.preventDefault();
+          deleteTuitHandler(tuit._id);
+        }}
+      />
       <div className="row">
         <div className="col-auto pe-3">
           {/* Conditional render social icon */}
@@ -82,14 +90,6 @@ const TuitItem = ({ tuit }) => {
             )}
             <span className="text-secondary me-1">@{tuit.handle}</span>
             <span className="text-secondary"> - {tuit.time}</span>
-            <i
-              className="bi bi-x-lg text-secondary rounded-circle float-end wd-close"
-              onClick={(e) => {
-                e.stopPropagation();
-                e.preventDefault();
-                deleteTuitHandler(tuit._id);
-              }}
-            />
           </div>
           <div className="mb-2">{tuit.text}</div>
           <MediaContent tuit={tuit} />
