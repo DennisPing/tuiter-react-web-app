@@ -5,7 +5,7 @@
 
 .wd-profile-back:hover {
   cursor: pointer;
-  background-color: var(--bs-gray-200);
+  background-color: gainsboro;
 }
 
 .wd-profile-banner {
