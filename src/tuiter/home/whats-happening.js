@@ -21,7 +21,7 @@ const WhatsHappening = () => {
       <div className="row">
         <div className="col-auto pe-3">
           <img
-            src="https://mushucdn.b-cdn.net/Dennis_Headshot_Portrait.jpg"
+            src="https://mushucdn.b-cdn.net/Profile_Portrait_cropped.jpeg"
             className="wd-icon-width rounded-circle"
           />
         </div>
