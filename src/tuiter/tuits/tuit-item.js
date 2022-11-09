@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useDispatch } from "react-redux";
 
-import { deleteTuit } from "../reducers/tuit-reducer";
+import { deleteTuitThunk } from "../../services/tuits-thunks";
 import TuitStat from "./tuit-stats";
 import "./index.css";
 
@@ -56,7 +56,7 @@ const SocialIcon = ({ action }) => {
 const TuitItem = ({ tuit }) => {
   const dispatch = useDispatch();
   const deleteTuitHandler = (id) => {
-    dispatch(deleteTuit(id));
+    dispatch(deleteTuitThunk(id));
   };
 
   return (

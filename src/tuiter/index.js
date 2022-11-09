@@ -8,7 +8,6 @@ import WhoToFollowList from "./who-to-follow-list";
 import HomeComponent from "./home";
 import ProfileComponent from "./profile";
 import whoReducer from "./reducers/who-reducer";
-import postReducer from "./reducers/post-reducer";
 import tuitReducer from "./reducers/tuit-reducer";
 import profileReducer from "./reducers/profile-reducer";
 import EditProfileComponent from "./edit-profile";
@@ -16,8 +15,7 @@ import EditProfileComponent from "./edit-profile";
 const store = configureStore({
   reducer: {
     who: whoReducer,
-    post: postReducer,
-    tuit: tuitReducer,
+    tuitsData: tuitReducer,
     profile: profileReducer,
   },
 });

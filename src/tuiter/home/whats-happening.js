@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { createTuit } from "../reducers/tuit-reducer";
 import { useDispatch } from "react-redux";
 import TextareaAutosize from "react-textarea-autosize";
+
+import { createTuitThunk } from "../../services/tuits-thunks";
 
 import "./index.css";
 
@@ -12,7 +13,8 @@ const WhatsHappening = () => {
     const newTuit = {
       text: whatsHappening,
     };
-    dispatch(createTuit(newTuit));
+    dispatch(createTuitThunk(newTuit));
+    setWhatsHappening("");
   };
 
   return (

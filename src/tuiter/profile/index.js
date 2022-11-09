@@ -5,11 +5,14 @@ import ProfileTuits from "./profile-tuits";
 
 const ProfileComponent = () => {
   const profile = useSelector((state) => state.profile);
-  const tuitsArray = useSelector((state) => state.tuit);
+  const { tuits, loading } = useSelector((state) => state.tuitsData);
   return (
     <div className="list-group rounded-4">
       <ProfileBio profile={profile} />
-      <ProfileTuits handle={profile.handle} tuits={tuitsArray} />
+      <>
+        {loading && <li className="list-group-item">Loading...</li>}
+        <ProfileTuits handle={profile.handle} tuits={tuits} />
+      </>
     </div>
   );
 };
