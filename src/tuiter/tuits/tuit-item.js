@@ -63,9 +63,7 @@ const TuitItem = ({ tuit }) => {
     <div className="list-group-item list-group-item-action pt-3 pb-0 position-relative">
       <i
         className="bi bi-x-lg text-secondary rounded-circle position-absolute top-0 end-0 me-3 mt-3 wd-close"
-        onClick={(e) => {
-          e.stopPropagation();
-          e.preventDefault();
+        onClick={() => {
           deleteTuitHandler(tuit._id);
         }}
       />

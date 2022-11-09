@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useDispatch } from "react-redux";
 
-import { toggleLikeTuit, toggleRetuit } from "../reducers/tuit-reducer";
+import { updateTuitThunk } from "../../services/tuits-thunks";
 
 // Code borrowed from: https://stackoverflow.com/questions/9461621/format-a-number-as-2-5k-if-a-thousand-or-more-otherwise-900
 const kFormatter = (num) => {
@@ -13,12 +13,25 @@ const kFormatter = (num) => {
 
 const TuitStat = ({ id, comments, retuits, retuited, likes, liked }) => {
   const dispatch = useDispatch();
+
   const toggleLikeTuitHandler = (id) => {
-    dispatch(toggleLikeTuit(id));
+    dispatch(
+      updateTuitThunk({
+        _id: id,
+        liked: !liked,
+        likes: liked ? likes - 1 : likes + 1,
+      })
+    );
   };
 
   const toggleRetuitHandler = (id) => {
-    dispatch(toggleRetuit(id));
+    dispatch(
+      updateTuitThunk({
+        _id: id,
+        retuited: !retuited,
+        retuits: retuited ? retuits - 1 : retuits + 1,
+      })
+    );
   };
 
   return (
@@ -35,9 +48,7 @@ const TuitStat = ({ id, comments, retuits, retuited, likes, liked }) => {
       <div className="col p-0">
         <span
           className="wd-hover-icon d-inline-block"
-          onClick={(e) => {
-            e.stopPropagation();
-            e.preventDefault();
+          onClick={() => {
             toggleRetuitHandler(id);
           }}
         >
@@ -55,9 +66,7 @@ const TuitStat = ({ id, comments, retuits, retuited, likes, liked }) => {
       <div className="col p-0">
         <span
           className="wd-hover-icon d-inline-block"
-          onClick={(e) => {
-            e.stopPropagation();
-            e.preventDefault();
+          onClick={() => {
             toggleLikeTuitHandler(id);
           }}
         >
