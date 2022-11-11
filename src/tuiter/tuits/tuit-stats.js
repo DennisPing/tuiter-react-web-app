@@ -11,7 +11,7 @@ const kFormatter = (num) => {
     : Math.sign(num) * Math.abs(num);
 };
 
-const TuitStat = ({ id, comments, retuits, retuited, likes, liked }) => {
+const TuitStat = ({ id, comments, retuits, retuited, likes, liked, dislikes, disliked }) => {
   const dispatch = useDispatch();
 
   const toggleLikeTuitHandler = (id) => {
@@ -34,8 +34,18 @@ const TuitStat = ({ id, comments, retuits, retuited, likes, liked }) => {
     );
   };
 
+  const toggleDislikeTuitHandler = (id) => {
+    dispatch(
+      updateTuitThunk({
+        _id: id,
+        disliked: !disliked,
+        dislikes: disliked ? dislikes - 1 : dislikes + 1,
+      })
+    );
+  };
+
   return (
-    <div className="row row-cols-4 text-secondary mb-2">
+    <div className="row row-cols-5 text-secondary mb-2">
       <div className="col ps-2 pe-0">
         <span className="wd-hover-icon d-inline-block">
           <FontAwesomeIcon
@@ -80,6 +90,24 @@ const TuitStat = ({ id, comments, retuits, retuited, likes, liked }) => {
         </span>
       </div>
       <div className="col p-0">
+        <span
+          className="wd-hover-icon d-inline-block"
+          onClick={() => {
+            toggleDislikeTuitHandler(id);
+          }}
+        >
+          <FontAwesomeIcon
+            icon={disliked ? ["fas", "thumbs-down"] : ["far", "thumbs-down"]}
+            className={`rounded-circle align-middle p-2 wd-icon-sq fa-flip-horizontal ${
+              disliked ? "text-warning" : ""
+            }`}
+          />
+          <span className={`mx-1 align-middle ${disliked ? "text-warning" : ""}`}>
+            {kFormatter(dislikes)}
+          </span>
+        </span>
+      </div>
+      <div className="col p-0">
         <span className="wd-hover-icon d-inline-block">
           <FontAwesomeIcon
             icon={["fas", "arrow-up-from-bracket"]}
@@ -98,6 +126,8 @@ TuitStat.propTypes = {
   retuited: PropTypes.bool,
   likes: PropTypes.number,
   liked: PropTypes.bool,
+  dislikes: PropTypes.number,
+  disliked: PropTypes.bool,
 };
 
 export default TuitStat;

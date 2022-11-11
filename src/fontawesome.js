@@ -1,7 +1,7 @@
 // import the library
 import { library } from "@fortawesome/fontawesome-svg-core";
 
-import { faComment, faHeart } from "@fortawesome/free-regular-svg-icons";
+import { faComment, faHeart, faThumbsDown } from "@fortawesome/free-regular-svg-icons";
 import {
   faRetweet,
   faHeart as faHeartSolid,
@@ -13,6 +13,7 @@ import {
   faXmark,
   faLink,
   faUser,
+  faThumbsDown as faThumbsDownSolid,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -27,5 +28,7 @@ library.add(
   faArrowLeft,
   faXmark,
   faLink,
-  faUser
+  faUser,
+  faThumbsDown,
+  faThumbsDownSolid
 );

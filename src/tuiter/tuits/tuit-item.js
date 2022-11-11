@@ -98,6 +98,8 @@ const TuitItem = ({ tuit }) => {
             retuited={tuit.retuited}
             likes={tuit.likes}
             liked={tuit.liked}
+            dislikes={tuit.dislikes}
+            disliked={tuit.disliked}
           />
         </div>
       </div>
@@ -126,6 +128,8 @@ TuitItem.propTypes = {
     retuited: PropTypes.bool,
     likes: PropTypes.number,
     liked: PropTypes.bool,
+    dislikes: PropTypes.number,
+    disliked: PropTypes.bool,
     socialAction: PropTypes.shape({
       action: PropTypes.string.isRequired,
       username: PropTypes.string.isRequired,
