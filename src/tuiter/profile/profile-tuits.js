@@ -9,6 +9,8 @@ const ProfileTuits = ({ handle, tuits }) => {
         .filter((tuit) => {
           return tuit.handle === handle || tuit.retuited === true;
         })
+        .slice(0)
+        .reverse()
         .map((tuit) => (
           <TuitItem key={tuit._id} tuit={tuit} />
         ))}

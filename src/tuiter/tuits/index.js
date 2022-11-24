@@ -14,9 +14,12 @@ const TuitList = () => {
     <>
       {loading && <li className="list-group-item">Loading...</li>}
 
-      {tuits.map((tuit) => (
-        <TuitItem key={tuit._id} tuit={tuit} />
-      ))}
+      {tuits
+        .slice(0)
+        .reverse()
+        .map((tuit) => (
+          <TuitItem key={tuit._id} tuit={tuit} />
+        ))}
     </>
   );
 };

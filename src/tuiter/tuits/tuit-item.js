@@ -18,10 +18,7 @@ const MediaContent = ({ tuit }) => {
   // Image with media card
   else {
     return (
-      <a
-        href={tuit.mediaCard.mediaLink}
-        className="card mb-2 border-0 rounded-4 text-decoration-none"
-      >
+      <a href={tuit.mediaCard.mediaLink} className="card mb-2 border-0 rounded-4 text-decoration-none">
         <img src={tuit.image} className="card-img-top border wd-top-rounded-corners" />
         <div className="card-body pt-2 border-start border-end border-bottom wd-bottom-rounded-corners">
           <div className="card-link text-secondary">{tuit.mediaCard.mediaDomain}</div>
@@ -83,9 +80,7 @@ const TuitItem = ({ tuit }) => {
           <div className="align-items-center">
             <span className="fw-bold me-1">{tuit.username}</span>
             {/* Conditional render verified badge */}
-            {tuit.verified && (
-              <FontAwesomeIcon icon={["fas", "circle-check"]} className="text-primary me-1" />
-            )}
+            {tuit.verified && <FontAwesomeIcon icon={["fas", "circle-check"]} className="text-primary me-1" />}
             <span className="text-secondary me-1">@{tuit.handle}</span>
             <span className="text-secondary"> - {tuit.time}</span>
           </div>
@@ -109,7 +104,7 @@ const TuitItem = ({ tuit }) => {
 
 TuitItem.propTypes = {
   tuit: PropTypes.shape({
-    _id: PropTypes.number.isRequired,
+    _id: PropTypes.string.isRequired,
     avatarIcon: PropTypes.string.isRequired,
     username: PropTypes.string.isRequired,
     handle: PropTypes.string.isRequired,

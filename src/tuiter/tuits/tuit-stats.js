@@ -48,10 +48,7 @@ const TuitStat = ({ id, comments, retuits, retuited, likes, liked, dislikes, dis
     <div className="row row-cols-5 text-secondary mb-2">
       <div className="col ps-2 pe-0">
         <span className="wd-hover-icon d-inline-block">
-          <FontAwesomeIcon
-            icon={["far", "comment"]}
-            className="rounded-circle align-middle p-2 wd-icon-sq"
-          />
+          <FontAwesomeIcon icon={["far", "comment"]} className="rounded-circle align-middle p-2 wd-icon-sq" />
           <span className="mx-1 align-middle">{kFormatter(comments)}</span>
         </span>
       </div>
@@ -64,13 +61,9 @@ const TuitStat = ({ id, comments, retuits, retuited, likes, liked, dislikes, dis
         >
           <FontAwesomeIcon
             icon={["fas", "retweet"]}
-            className={`rounded-circle align-middle p-2 wd-icon-sq ${
-              retuited ? "text-success" : ""
-            }`}
+            className={`rounded-circle align-middle p-2 wd-icon-sq ${retuited ? "text-success" : ""}`}
           />
-          <span className={`mx-1 align-middle ${retuited ? "text-success" : ""}`}>
-            {kFormatter(retuits)}
-          </span>
+          <span className={`mx-1 align-middle ${retuited ? "text-success" : ""}`}>{kFormatter(retuits)}</span>
         </span>
       </div>
       <div className="col p-0">
@@ -84,9 +77,7 @@ const TuitStat = ({ id, comments, retuits, retuited, likes, liked, dislikes, dis
             icon={liked ? ["fas", "heart"] : ["far", "heart"]}
             className={`rounded-circle align-middle p-2 wd-icon-sq ${liked ? "text-danger" : ""}`}
           />
-          <span className={`mx-1 align-middle ${liked ? "text-danger" : ""}`}>
-            {kFormatter(likes)}
-          </span>
+          <span className={`mx-1 align-middle ${liked ? "text-danger" : ""}`}>{kFormatter(likes)}</span>
         </span>
       </div>
       <div className="col p-0">
@@ -102,9 +93,7 @@ const TuitStat = ({ id, comments, retuits, retuited, likes, liked, dislikes, dis
               disliked ? "text-warning" : ""
             }`}
           />
-          <span className={`mx-1 align-middle ${disliked ? "text-warning" : ""}`}>
-            {kFormatter(dislikes)}
-          </span>
+          <span className={`mx-1 align-middle ${disliked ? "text-warning" : ""}`}>{kFormatter(dislikes)}</span>
         </span>
       </div>
       <div className="col p-0">
@@ -120,7 +109,7 @@ const TuitStat = ({ id, comments, retuits, retuited, likes, liked, dislikes, dis
 };
 
 TuitStat.propTypes = {
-  id: PropTypes.number,
+  id: PropTypes.string,
   comments: PropTypes.number,
   retuits: PropTypes.number,
   retuited: PropTypes.bool,
