@@ -5,6 +5,7 @@ const API_BASE = process.env.REACT_APP_API_RENDER;
 const TUITS_API = `${API_BASE}/tuits`;
 
 export const findTuits = async () => {
+  console.log("Fetching from API" + API_BASE);
   const resp = await axios.get(TUITS_API);
   return resp.data;
 };
