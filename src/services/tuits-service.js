@@ -1,11 +1,10 @@
 import axios from "axios";
 
 // const API_BASE = process.env.REACT_APP_API_BASE;
-const API_BASE = process.env.REACT_APP_API_RENDER;
+const API_BASE = process.env.REACT_APP_API_BACKUP;
 const TUITS_API = `${API_BASE}/tuits`;
 
 export const findTuits = async () => {
-  console.log("Fetching from API" + API_BASE);
   const resp = await axios.get(TUITS_API);
   return resp.data;
 };
