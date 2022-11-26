@@ -6,20 +6,6 @@ const initialState = {
   loading: false,
 };
 
-const currentUser = {
-  username: "Dennis Ping",
-  handle: "DennisPing",
-  avatarIcon: "https://mushucdn.b-cdn.net/Dennis_Headshot_Portrait.jpg",
-};
-
-const templateTuit = {
-  ...currentUser,
-  time: "1m",
-  comments: 0,
-  retuits: 0,
-  likes: 0,
-};
-
 const tuitSlice = createSlice({
   name: "tuits",
   initialState: initialState,
@@ -46,10 +32,9 @@ const tuitSlice = createSlice({
     },
     [updateTuitThunk.rejected]: (state, action) => {
       state.loading = false;
-      // Revert the tuit to its original state
+      // Revert the tuit back to its original state
       const tuit = state.tuits.find((tuit) => tuit._id === action.meta.arg._id);
       for (const key in action.meta.arg) {
-        console.log(key);
         if (typeof tuit[key] === "boolean") {
           switch (key) {
             case "liked":
@@ -75,17 +60,6 @@ const tuitSlice = createSlice({
     },
   },
   reducers: {
-    createTuit(state, action) {
-      state.push({
-        ...action.payload,
-        ...templateTuit,
-        _id: new Date().getTime(),
-      });
-    },
-    deleteTuit(state, action) {
-      const index = state.findIndex((tuit) => tuit._id === action.payload);
-      state.splice(index, 1);
-    },
     toggleLikeTuit(state, action) {
       const tuit = state.tuits.find((tuit) => tuit._id === action.payload);
       if (tuit) {
