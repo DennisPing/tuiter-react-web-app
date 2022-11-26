@@ -35,3 +35,15 @@
   width: 16px;
   height: 16px;
 }
+
+.wd-tuit:hover {
+  cursor: pointer;
+  background-color: var(--bs-light);
+}
+
+.wd-prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  -moz-user-select: none; /* Firefox */
+  user-select: none; /* Chrome and Opera */
+}

@@ -57,7 +57,7 @@ const TuitItem = ({ tuit }) => {
   };
 
   return (
-    <div className="list-group-item list-group-item-action pt-3 pb-0 position-relative">
+    <div className="list-group-item pt-3 pb-0 position-relative wd-tuit">
       <i
         className="bi bi-x-lg text-secondary rounded-circle position-absolute top-0 end-0 me-3 mt-3 wd-close"
         onClick={() => {

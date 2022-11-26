@@ -45,7 +45,7 @@ const TuitStat = ({ id, comments, retuits, retuited, likes, liked, dislikes, dis
   };
 
   return (
-    <div className="row row-cols-5 text-secondary mb-2">
+    <div className="row row-cols-5 text-secondary mb-2 wd-prevent-select">
       <div className="col ps-2 pe-0">
         <span className="wd-hover-icon d-inline-block">
           <FontAwesomeIcon icon={["far", "comment"]} className="rounded-circle align-middle p-2 wd-icon-sq" />
