@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useDispatch } from "react-redux";
 
 import { updateTuitThunk } from "../../services/tuits-thunks";
+import { toggleLikeTuit, toggleRetuit, toggleDislike } from "../reducers/tuit-reducer";
 
 // Code borrowed from: https://stackoverflow.com/questions/9461621/format-a-number-as-2-5k-if-a-thousand-or-more-otherwise-900
 const kFormatter = (num) => {
@@ -15,6 +16,7 @@ const TuitStat = ({ id, comments, retuits, retuited, likes, liked, dislikes, dis
   const dispatch = useDispatch();
 
   const toggleLikeTuitHandler = (id) => {
+    dispatch(toggleLikeTuit(id));
     dispatch(
       updateTuitThunk({
         _id: id,
@@ -25,6 +27,7 @@ const TuitStat = ({ id, comments, retuits, retuited, likes, liked, dislikes, dis
   };
 
   const toggleRetuitHandler = (id) => {
+    dispatch(toggleRetuit(id));
     dispatch(
       updateTuitThunk({
         _id: id,
@@ -35,6 +38,7 @@ const TuitStat = ({ id, comments, retuits, retuited, likes, liked, dislikes, dis
   };
 
   const toggleDislikeTuitHandler = (id) => {
+    dispatch(toggleDislike(id));
     dispatch(
       updateTuitThunk({
         _id: id,
