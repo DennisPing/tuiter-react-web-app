@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useDispatch } from "react-redux";
+import { unwrapResult } from "@reduxjs/toolkit";
 
 import { updateTuitThunk } from "../../services/tuits-thunks";
 import { toggleLikeTuit, toggleRetuit, toggleDislike } from "../reducers/tuit-reducer";
@@ -23,7 +24,11 @@ const TuitStat = ({ id, comments, retuits, retuited, likes, liked, dislikes, dis
         liked: !liked,
         likes: liked ? likes - 1 : likes + 1,
       })
-    );
+    )
+      .then(unwrapResult)
+      .catch(() => {
+        dispatch(toggleLikeTuit(id)); // undo like if failed
+      });
   };
 
   const toggleRetuitHandler = (id) => {
@@ -34,7 +39,11 @@ const TuitStat = ({ id, comments, retuits, retuited, likes, liked, dislikes, dis
         retuited: !retuited,
         retuits: retuited ? retuits - 1 : retuits + 1,
       })
-    );
+    )
+      .then(unwrapResult)
+      .catch(() => {
+        dispatch(toggleRetuit(id)); // undo retuit if failed
+      });
   };
 
   const toggleDislikeTuitHandler = (id) => {
@@ -45,7 +54,11 @@ const TuitStat = ({ id, comments, retuits, retuited, likes, liked, dislikes, dis
         disliked: !disliked,
         dislikes: disliked ? dislikes - 1 : dislikes + 1,
       })
-    );
+    )
+      .then(unwrapResult)
+      .catch(() => {
+        dispatch(toggleDislike(id)); // undo dislike if failed
+      });
   };
 
   return (
